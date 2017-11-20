@@ -132,12 +132,12 @@
     "url": "/assertions/any/to-be-truthy/"
   },
   {
-    "label": "to be undefined (any)",
-    "url": "/assertions/any/to-be-undefined/"
-  },
-  {
     "label": "to be (any)",
     "url": "/assertions/any/to-be/"
+  },
+  {
+    "label": "to be undefined (any)",
+    "url": "/assertions/any/to-be-undefined/"
   },
   {
     "label": "to equal (any)",
