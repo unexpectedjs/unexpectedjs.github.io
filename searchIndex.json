@@ -72,16 +72,16 @@
     "url": "/assertions/Buffer/when-decoded-as/"
   },
   {
-    "label": "to be fulfilled with value satisfying (Promise)",
-    "url": "/assertions/Promise/to-be-fulfilled-with-value-satisfying/"
-  },
-  {
     "label": "to be fulfilled with (Promise)",
     "url": "/assertions/Promise/to-be-fulfilled-with/"
   },
   {
     "label": "to be fulfilled (Promise)",
     "url": "/assertions/Promise/to-be-fulfilled/"
+  },
+  {
+    "label": "to be fulfilled with value satisfying (Promise)",
+    "url": "/assertions/Promise/to-be-fulfilled-with-value-satisfying/"
   },
   {
     "label": "to be rejected with error satisfying (Promise)",
@@ -124,12 +124,12 @@
     "url": "/assertions/any/to-be-ok/"
   },
   {
-    "label": "to be one of (any)",
-    "url": "/assertions/any/to-be-one-of/"
-  },
-  {
     "label": "to be truthy (any)",
     "url": "/assertions/any/to-be-truthy/"
+  },
+  {
+    "label": "to be one of (any)",
+    "url": "/assertions/any/to-be-one-of/"
   },
   {
     "label": "to be undefined (any)",
@@ -240,12 +240,12 @@
     "url": "/assertions/number/to-be-close-to/"
   },
   {
-    "label": "to be finite (number)",
-    "url": "/assertions/number/to-be-finite/"
-  },
-  {
     "label": "to be greater than or equal to (number)",
     "url": "/assertions/number/to-be-greater-than-or-equal-to/"
+  },
+  {
+    "label": "to be finite (number)",
+    "url": "/assertions/number/to-be-finite/"
   },
   {
     "label": "to be greater than (number)",
@@ -280,12 +280,12 @@
     "url": "/assertions/object/to-be-canonical/"
   },
   {
-    "label": "to be empty (object)",
-    "url": "/assertions/object/to-be-empty/"
-  },
-  {
     "label": "to have a value satisfying (object)",
     "url": "/assertions/object/to-have-a-value-satisfying/"
+  },
+  {
+    "label": "to be empty (object)",
+    "url": "/assertions/object/to-be-empty/"
   },
   {
     "label": "to have key (object)",
