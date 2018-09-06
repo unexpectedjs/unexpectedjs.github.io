@@ -18,16 +18,16 @@
                     <button class="menu-toggle" onclick="toggleSidebar()"></button>
                 </li>
                 
-                <li class=""><a href="../..">Unexpected</a></li>
+                <li class=""><a href="../../">Unexpected</a></li>
                 
                 
-                <li class=""><a href="../../assertions/any/to-be">Assertions</a></li>
+                <li class=""><a href="../../assertions/any/to-be/">Assertions</a></li>
                 
                 
-                <li class="active"><a href="../addAssertion">API</a></li>
+                <li class="active"><a href="../addAssertion/">API</a></li>
                 
                 
-                <li class=""><a href="../../plugins">Plugins</a></li>
+                <li class=""><a href="../../plugins/">Plugins</a></li>
                 
             </ul>
         </nav>
@@ -44,67 +44,79 @@
     <ul>
         
         <li class="">
-            <a href="../addAssertion">addAssertion</a>
+            <a href="../addAssertion/">addAssertion</a>
         </li>
         
         <li class="">
-            <a href="../addType">addType</a>
+            <a href="../addStyle/">addStyle</a>
         </li>
         
         <li class="">
-            <a href="../async">async</a>
+            <a href="../addType/">addType</a>
         </li>
         
         <li class="">
-            <a href="../child">child</a>
+            <a href="../async/">async</a>
         </li>
         
         <li class="">
-            <a href="../clone">clone</a>
+            <a href="../child/">child</a>
         </li>
         
         <li class="">
-            <a href="../expect">expect</a>
+            <a href="../clone/">clone</a>
         </li>
         
         <li class="">
-            <a href="../fail">fail</a>
+            <a href="../expect/">expect</a>
         </li>
         
         <li class="">
-            <a href="../promise">promise</a>
+            <a href="../fail/">fail</a>
         </li>
         
         <li class="">
-            <a href="../promise-all">promise.all</a>
+            <a href="../freeze/">freeze</a>
         </li>
         
         <li class="">
-            <a href="../promise-any">promise.any</a>
+            <a href="../installTheme/">installTheme</a>
+        </li>
+        
+        <li class="">
+            <a href="../promise/">promise</a>
+        </li>
+        
+        <li class="">
+            <a href="../promise-all/">promise.all</a>
+        </li>
+        
+        <li class="">
+            <a href="../promise-any/">promise.any</a>
         </li>
         
         <li class="active">
-            <a href="">promise.settle</a>
+            <a href="/">promise.settle</a>
         </li>
         
         <li class="">
-            <a href="../shift">shift</a>
+            <a href="../shift/">shift</a>
         </li>
         
         <li class="">
-            <a href="../toString">toString</a>
+            <a href="../toString/">toString</a>
         </li>
         
         <li class="">
-            <a href="../UnexpectedError">UnexpectedError</a>
+            <a href="../UnexpectedError/">UnexpectedError</a>
         </li>
         
         <li class="">
-            <a href="../use">use</a>
+            <a href="../use/">use</a>
         </li>
         
         <li class="">
-            <a href="../withError">withError</a>
+            <a href="../withError/">withError</a>
         </li>
         
     </ul>
@@ -119,7 +131,7 @@ fulfilled. When the returned promise is fulfilled, you can use
 <a href="https://github.com/petkaantonov/bluebird/blob/master/API.md#synchronous-inspection">synchronous inspection</a>
 on each of the promises to read their values.</p>
 <p>Let&#39;s make an asynchronous assertion that we can use for the examples:</p>
-<div class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">addAssertion</span><span style="color: #000000">(</span><span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number&nbsp;after&nbsp;a&nbsp;short&nbsp;delay'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>expect<span style="color: #000000">,</span>&nbsp;subject<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">promise</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>run<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #000000">run</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>subject<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">}),</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">});</span></div></div><p>See the <a href="/api/promise">promise</a> documentation for more details on how
+<div class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">addAssertion</span><span style="color: #000000">(</span><span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number&nbsp;after&nbsp;a&nbsp;short&nbsp;delay'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;expect<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;subject</div><div><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">promise</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>run<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">run</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>subject<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">}),</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0086b3">1</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">});</span></div></div><p>See the <a href="/api/promise">promise</a> documentation for more details on how
 expect.promise works.</p>
 <p>The following code snippet creates a promise that is rejected when any
 promise in the nested structure is rejected. When the returned promise

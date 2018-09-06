@@ -18,16 +18,16 @@
                     <button class="menu-toggle" onclick="toggleSidebar()"></button>
                 </li>
                 
-                <li class=""><a href="../..">Unexpected</a></li>
+                <li class=""><a href="../../">Unexpected</a></li>
                 
                 
-                <li class=""><a href="../../assertions/any/to-be">Assertions</a></li>
+                <li class=""><a href="../../assertions/any/to-be/">Assertions</a></li>
                 
                 
-                <li class="active"><a href="../addAssertion">API</a></li>
+                <li class="active"><a href="../addAssertion/">API</a></li>
                 
                 
-                <li class=""><a href="../../plugins">Plugins</a></li>
+                <li class=""><a href="../../plugins/">Plugins</a></li>
                 
             </ul>
         </nav>
@@ -44,67 +44,79 @@
     <ul>
         
         <li class="">
-            <a href="../addAssertion">addAssertion</a>
+            <a href="../addAssertion/">addAssertion</a>
         </li>
         
         <li class="">
-            <a href="../addType">addType</a>
+            <a href="../addStyle/">addStyle</a>
         </li>
         
         <li class="">
-            <a href="../async">async</a>
+            <a href="../addType/">addType</a>
         </li>
         
         <li class="">
-            <a href="../child">child</a>
+            <a href="../async/">async</a>
         </li>
         
         <li class="">
-            <a href="../clone">clone</a>
+            <a href="../child/">child</a>
         </li>
         
         <li class="">
-            <a href="../expect">expect</a>
+            <a href="../clone/">clone</a>
+        </li>
+        
+        <li class="">
+            <a href="../expect/">expect</a>
         </li>
         
         <li class="active">
-            <a href="">fail</a>
+            <a href="/">fail</a>
         </li>
         
         <li class="">
-            <a href="../promise">promise</a>
+            <a href="../freeze/">freeze</a>
         </li>
         
         <li class="">
-            <a href="../promise-all">promise.all</a>
+            <a href="../installTheme/">installTheme</a>
         </li>
         
         <li class="">
-            <a href="../promise-any">promise.any</a>
+            <a href="../promise/">promise</a>
         </li>
         
         <li class="">
-            <a href="../promise-settle">promise.settle</a>
+            <a href="../promise-all/">promise.all</a>
         </li>
         
         <li class="">
-            <a href="../shift">shift</a>
+            <a href="../promise-any/">promise.any</a>
         </li>
         
         <li class="">
-            <a href="../toString">toString</a>
+            <a href="../promise-settle/">promise.settle</a>
         </li>
         
         <li class="">
-            <a href="../UnexpectedError">UnexpectedError</a>
+            <a href="../shift/">shift</a>
         </li>
         
         <li class="">
-            <a href="../use">use</a>
+            <a href="../toString/">toString</a>
         </li>
         
         <li class="">
-            <a href="../withError">withError</a>
+            <a href="../UnexpectedError/">UnexpectedError</a>
+        </li>
+        
+        <li class="">
+            <a href="../use/">use</a>
+        </li>
+        
+        <li class="">
+            <a href="../withError/">withError</a>
         </li>
         
     </ul>
@@ -121,9 +133,9 @@ for the different error modes.</p>
 <code>expect.fail</code> with a callback and receive a
 <a href="https://github.com/sunesimonsen/magicpen">magicpen</a> instance that the
 output can be written to.</p>
-<div class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">fail</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>output<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'You&nbsp;have&nbsp;been&nbsp;a&nbsp;very&nbsp;bad&nbsp;boy!'</span><span style="color: #000000">.</span><span style="color: #000000">split</span><span style="color: #000000">(</span><span style="color: #183691">/&nbsp;/</span><span style="color: #000000">).</span><span style="color: #000000">forEach</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>word<span style="color: #000000">,</span>&nbsp;index<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">if</span>&nbsp;<span style="color: #000000">(</span>index&nbsp;<span style="color: #a71d5d">&gt;</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span>&nbsp;output<span style="color: #000000">.</span><span style="color: #000000">sp</span><span style="color: #000000">();</span>&nbsp;<span style="color: #000000">}</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">var</span>&nbsp;style&nbsp;<span style="color: #a71d5d">=</span>&nbsp;index&nbsp;<span style="color: #a71d5d">%</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #a71d5d">===</span>&nbsp;<span style="color: #0086b3">0</span>&nbsp;<span style="color: #a71d5d">?</span>&nbsp;<span style="color: #df5000">'jsPrimitive'</span>&nbsp;<span style="color: #000000">:</span>&nbsp;<span style="color: #df5000">'jsString'</span><span style="color: #000000">;</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;output<span style="color: #000000">[</span>style<span style="color: #000000">](</span>word<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">});</span></div></div><div class="output"><div><span style="color: #0086b3">You</span>&nbsp;<span style="color: #df5000">have</span>&nbsp;<span style="color: #0086b3">been</span>&nbsp;<span style="color: #df5000">a</span>&nbsp;<span style="color: #0086b3">very</span>&nbsp;<span style="color: #df5000">bad</span>&nbsp;<span style="color: #0086b3">boy!</span></div></div><p>If you want to build an error containing a diff you can call
+<div class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">fail</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>output<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'You&nbsp;have&nbsp;been&nbsp;a&nbsp;very&nbsp;bad&nbsp;boy!'</span><span style="color: #000000">.</span><span style="color: #000000">split</span><span style="color: #000000">(</span><span style="color: #183691">/&nbsp;/</span><span style="color: #000000">).</span><span style="color: #000000">forEach</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>word<span style="color: #000000">,</span>&nbsp;index<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">if</span>&nbsp;<span style="color: #000000">(</span>index&nbsp;<span style="color: #a71d5d">&gt;</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output<span style="color: #000000">.</span><span style="color: #000000">sp</span><span style="color: #000000">();</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">}</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">var</span>&nbsp;style&nbsp;<span style="color: #a71d5d">=</span>&nbsp;index&nbsp;<span style="color: #a71d5d">%</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #a71d5d">===</span>&nbsp;<span style="color: #0086b3">0</span>&nbsp;<span style="color: #a71d5d">?</span>&nbsp;<span style="color: #df5000">'jsPrimitive'</span>&nbsp;<span style="color: #000000">:</span>&nbsp;<span style="color: #df5000">'jsString'</span><span style="color: #000000">;</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;output<span style="color: #000000">[</span>style<span style="color: #000000">](</span>word<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">});</span></div></div><div class="output"><div><span style="color: #0086b3">You</span>&nbsp;<span style="color: #df5000">have</span>&nbsp;<span style="color: #0086b3">been</span>&nbsp;<span style="color: #df5000">a</span>&nbsp;<span style="color: #0086b3">very</span>&nbsp;<span style="color: #df5000">bad</span>&nbsp;<span style="color: #0086b3">boy!</span></div></div><p>If you want to build an error containing a diff you can call
 <code>expect.fail</code> with a error definition.</p>
-<div class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">fail</span><span style="color: #000000">({</span></div><div>&nbsp;&nbsp;message<span style="color: #000000">:</span>&nbsp;<span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>output<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'You&nbsp;have&nbsp;been&nbsp;a&nbsp;very&nbsp;bad&nbsp;boy!'</span><span style="color: #000000">.</span><span style="color: #000000">split</span><span style="color: #000000">(</span><span style="color: #183691">/&nbsp;/</span><span style="color: #000000">).</span><span style="color: #000000">forEach</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>word<span style="color: #000000">,</span>&nbsp;index<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">if</span>&nbsp;<span style="color: #000000">(</span>index&nbsp;<span style="color: #a71d5d">&gt;</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span>&nbsp;output<span style="color: #000000">.</span><span style="color: #000000">sp</span><span style="color: #000000">();</span>&nbsp;<span style="color: #000000">}</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">var</span>&nbsp;style&nbsp;<span style="color: #a71d5d">=</span>&nbsp;index&nbsp;<span style="color: #a71d5d">%</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #a71d5d">===</span>&nbsp;<span style="color: #0086b3">0</span>&nbsp;<span style="color: #a71d5d">?</span>&nbsp;<span style="color: #df5000">'jsPrimitive'</span>&nbsp;<span style="color: #000000">:</span>&nbsp;<span style="color: #df5000">'jsString'</span><span style="color: #000000">;</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output<span style="color: #000000">[</span>style<span style="color: #000000">](</span>word<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">});</span></div><div>&nbsp;&nbsp;<span style="color: #000000">},</span></div><div>&nbsp;&nbsp;diff<span style="color: #000000">:</span>&nbsp;<span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>output<span style="color: #000000">,</span>&nbsp;diff<span style="color: #000000">,</span>&nbsp;inspect<span style="color: #000000">,</span>&nbsp;equal<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">diff</span><span style="color: #000000">(</span><span style="color: #df5000">'You&nbsp;have&nbsp;been&nbsp;a&nbsp;very&nbsp;bad&nbsp;boy!'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'You&nbsp;have&nbsp;been&nbsp;a&nbsp;very&nbsp;mad&nbsp;boy!'</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">}</span></div><div><span style="color: #000000">});</span></div></div><div class="output"><div><span style="color: #0086b3">You</span>&nbsp;<span style="color: #df5000">have</span>&nbsp;<span style="color: #0086b3">been</span>&nbsp;<span style="color: #df5000">a</span>&nbsp;<span style="color: #0086b3">very</span>&nbsp;<span style="color: #df5000">bad</span>&nbsp;<span style="color: #0086b3">boy!</span></div><div>&nbsp;</div><div><span style="color: red">You&nbsp;have&nbsp;been&nbsp;a&nbsp;very</span><span style="background-color: red; color: white">&nbsp;bad</span><span style="color: red">&nbsp;boy!</span></div><div><span style="color: green">You&nbsp;have&nbsp;been&nbsp;a&nbsp;very</span><span style="background-color: green; color: white">&nbsp;mad</span><span style="color: green">&nbsp;boy!</span></div></div><p>The message can be either a <code>string</code> a
+<div class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">fail</span><span style="color: #000000">({</span></div><div>&nbsp;&nbsp;message<span style="color: #000000">:</span>&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">(</span>output<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'You&nbsp;have&nbsp;been&nbsp;a&nbsp;very&nbsp;bad&nbsp;boy!'</span><span style="color: #000000">.</span><span style="color: #000000">split</span><span style="color: #000000">(</span><span style="color: #183691">/&nbsp;/</span><span style="color: #000000">).</span><span style="color: #000000">forEach</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>word<span style="color: #000000">,</span>&nbsp;index<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">if</span>&nbsp;<span style="color: #000000">(</span>index&nbsp;<span style="color: #a71d5d">&gt;</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output<span style="color: #000000">.</span><span style="color: #000000">sp</span><span style="color: #000000">();</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">}</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">var</span>&nbsp;style&nbsp;<span style="color: #a71d5d">=</span>&nbsp;index&nbsp;<span style="color: #a71d5d">%</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #a71d5d">===</span>&nbsp;<span style="color: #0086b3">0</span>&nbsp;<span style="color: #a71d5d">?</span>&nbsp;<span style="color: #df5000">'jsPrimitive'</span>&nbsp;<span style="color: #000000">:</span>&nbsp;<span style="color: #df5000">'jsString'</span><span style="color: #000000">;</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output<span style="color: #000000">[</span>style<span style="color: #000000">](</span>word<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">});</span></div><div>&nbsp;&nbsp;<span style="color: #000000">},</span></div><div>&nbsp;&nbsp;diff<span style="color: #000000">:</span>&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">(</span>output<span style="color: #000000">,</span>&nbsp;diff<span style="color: #000000">,</span>&nbsp;inspect<span style="color: #000000">,</span>&nbsp;equal<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">diff</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'You&nbsp;have&nbsp;been&nbsp;a&nbsp;very&nbsp;bad&nbsp;boy!'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'You&nbsp;have&nbsp;been&nbsp;a&nbsp;very&nbsp;mad&nbsp;boy!'</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">}</span></div><div><span style="color: #000000">});</span></div></div><div class="output"><div><span style="color: #0086b3">You</span>&nbsp;<span style="color: #df5000">have</span>&nbsp;<span style="color: #0086b3">been</span>&nbsp;<span style="color: #df5000">a</span>&nbsp;<span style="color: #0086b3">very</span>&nbsp;<span style="color: #df5000">bad</span>&nbsp;<span style="color: #0086b3">boy!</span></div><div>&nbsp;</div><div><span style="color: red">You&nbsp;have&nbsp;been&nbsp;a&nbsp;very</span><span style="background-color: red; color: white">&nbsp;bad</span><span style="color: red">&nbsp;boy!</span></div><div><span style="color: green">You&nbsp;have&nbsp;been&nbsp;a&nbsp;very</span><span style="background-color: green; color: white">&nbsp;mad</span><span style="color: green">&nbsp;boy!</span></div></div><p>The message can be either a <code>string</code> a
 <a href="https://github.com/sunesimonsen/magicpen">magicpen</a> instance or a
 function that will recieve a
 <a href="https://github.com/sunesimonsen/magicpen">magicpen</a> instance.</p>
