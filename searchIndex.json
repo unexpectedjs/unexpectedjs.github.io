@@ -116,6 +116,42 @@
     "url": "/assertions/Promise/when-rejected/"
   },
   {
+    "label": "to be empty (array-like)",
+    "url": "/assertions/array-like/to-be-empty/"
+  },
+  {
+    "label": "to be non-empty (array-like)",
+    "url": "/assertions/array-like/to-be-non-empty/"
+  },
+  {
+    "label": "to contain (array-like)",
+    "url": "/assertions/array-like/to-contain/"
+  },
+  {
+    "label": "to have an item satisfying (array-like)",
+    "url": "/assertions/array-like/to-have-an-item-satisfying/"
+  },
+  {
+    "label": "to have items satisfying (array-like)",
+    "url": "/assertions/array-like/to-have-items-satisfying/"
+  },
+  {
+    "label": "to have length (array-like)",
+    "url": "/assertions/array-like/to-have-length/"
+  },
+  {
+    "label": "when passed as parameters to (array-like)",
+    "url": "/assertions/array-like/when-passed-as-parameters-to/"
+  },
+  {
+    "label": "when sorted by (array-like)",
+    "url": "/assertions/array-like/when-sorted-by/"
+  },
+  {
+    "label": "when sorted (array-like)",
+    "url": "/assertions/array-like/when-sorted/"
+  },
+  {
     "label": "to be a (any)",
     "url": "/assertions/any/to-be-a/"
   },
@@ -162,42 +198,6 @@
   {
     "label": "when passed as parameter to (any)",
     "url": "/assertions/any/when-passed-as-parameter-to/"
-  },
-  {
-    "label": "to be empty (array-like)",
-    "url": "/assertions/array-like/to-be-empty/"
-  },
-  {
-    "label": "to be non-empty (array-like)",
-    "url": "/assertions/array-like/to-be-non-empty/"
-  },
-  {
-    "label": "to contain (array-like)",
-    "url": "/assertions/array-like/to-contain/"
-  },
-  {
-    "label": "to have an item satisfying (array-like)",
-    "url": "/assertions/array-like/to-have-an-item-satisfying/"
-  },
-  {
-    "label": "to have items satisfying (array-like)",
-    "url": "/assertions/array-like/to-have-items-satisfying/"
-  },
-  {
-    "label": "to have length (array-like)",
-    "url": "/assertions/array-like/to-have-length/"
-  },
-  {
-    "label": "when passed as parameters to (array-like)",
-    "url": "/assertions/array-like/when-passed-as-parameters-to/"
-  },
-  {
-    "label": "when sorted by (array-like)",
-    "url": "/assertions/array-like/when-sorted-by/"
-  },
-  {
-    "label": "when sorted (array-like)",
-    "url": "/assertions/array-like/when-sorted/"
   },
   {
     "label": "to be false (boolean)",
@@ -256,12 +256,12 @@
     "url": "/assertions/number/to-be-finite/"
   },
   {
-    "label": "to be greater than (number)",
-    "url": "/assertions/number/to-be-greater-than/"
-  },
-  {
     "label": "to be greater than or equal to (number)",
     "url": "/assertions/number/to-be-greater-than-or-equal-to/"
+  },
+  {
+    "label": "to be greater than (number)",
+    "url": "/assertions/number/to-be-greater-than/"
   },
   {
     "label": "to be infinite (number)",
