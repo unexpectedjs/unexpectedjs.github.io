@@ -100,12 +100,12 @@
     "url": "/assertions/Promise/to-be-rejected-with-error-satisfying/"
   },
   {
-    "label": "to be rejected with (Promise)",
-    "url": "/assertions/Promise/to-be-rejected-with/"
-  },
-  {
     "label": "to be rejected (Promise)",
     "url": "/assertions/Promise/to-be-rejected/"
+  },
+  {
+    "label": "to be rejected with (Promise)",
+    "url": "/assertions/Promise/to-be-rejected-with/"
   },
   {
     "label": "when fulfilled (Promise)",
