@@ -205,47 +205,6 @@
             
         </ul>
     
-        <h3 class=""><a href="../../function/">function</a></h3>
-        <ul>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback/">to call the callback</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback-with-error/">to call the callback with error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback-without-error/">to call the callback without error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-error/">to error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-have-arity/">to have arity</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-throw/">to throw</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-throw-a/">to throw a</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/when-called/">when called</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/when-called-with/">when called with</a>
-            </li>
-            
-        </ul>
-    
         <h3 class=""><a href="../../boolean/">boolean</a></h3>
         <ul>
             
@@ -296,6 +255,47 @@
             
             <li class="">
                 <a href="../to-have-values-satisfying/">to have values satisfying</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="../../function/">function</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback/">to call the callback</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback-with-error/">to call the callback with error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback-without-error/">to call the callback without error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-error/">to error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-have-arity/">to have arity</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-throw/">to throw</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-throw-a/">to throw a</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/when-called/">when called</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/when-called-with/">when called with</a>
             </li>
             
         </ul>
@@ -411,9 +411,9 @@
                 </ul>
             
             <p>Asserts that an object contains at least one value that satisfies a given
-value, function or other assertion.</p>
+value, function (wrapped in <code>expect.it</code>) or other assertion.</p>
 <p>Note that this assertion fails if passed an empty object as the subject.</p>
-<div class="code lang-javascript"><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">{</span>&nbsp;foo<span style="color: #000000">:</span>&nbsp;<span style="color: #000000">{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">},</span>&nbsp;bar<span style="color: #000000">:</span>&nbsp;<span style="color: #000000">{</span>&nbsp;b<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #000000">},</span>&nbsp;baz<span style="color: #000000">:</span>&nbsp;<span style="color: #000000">{</span>&nbsp;c<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">3</span>&nbsp;<span style="color: #000000">},</span>&nbsp;qux<span style="color: #000000">:</span>&nbsp;<span style="color: #000000">{</span>&nbsp;d<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">4</span>&nbsp;<span style="color: #000000">}</span>&nbsp;<span style="color: #000000">},</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #000000">{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">}</span></div><div><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">{</span>&nbsp;foo<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">,</span>&nbsp;bar<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;baz<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;qux<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">3</span>&nbsp;<span style="color: #000000">},</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">(</span>value<span style="color: #000000">,</span>&nbsp;index<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>value<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">}</span></div><div><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">{</span>&nbsp;foo<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">,</span>&nbsp;bar<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;baz<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;qux<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">3</span>&nbsp;<span style="color: #000000">},</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span></div><div><span style="color: #000000">);</span></div></div><p>The expected value will be matched against the value with
+<div class="code lang-javascript"><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">{</span>&nbsp;foo<span style="color: #000000">:</span>&nbsp;<span style="color: #000000">{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">},</span>&nbsp;bar<span style="color: #000000">:</span>&nbsp;<span style="color: #000000">{</span>&nbsp;b<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #000000">},</span>&nbsp;baz<span style="color: #000000">:</span>&nbsp;<span style="color: #000000">{</span>&nbsp;c<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">3</span>&nbsp;<span style="color: #000000">},</span>&nbsp;qux<span style="color: #000000">:</span>&nbsp;<span style="color: #000000">{</span>&nbsp;d<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">4</span>&nbsp;<span style="color: #000000">}</span>&nbsp;<span style="color: #000000">},</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #000000">{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">}</span></div><div><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">{</span>&nbsp;foo<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">,</span>&nbsp;bar<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;baz<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;qux<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">3</span>&nbsp;<span style="color: #000000">},</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>value<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>value<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">})</span></div><div><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">{</span>&nbsp;foo<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">,</span>&nbsp;bar<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;baz<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;qux<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">3</span>&nbsp;<span style="color: #000000">},</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span></div><div><span style="color: #000000">);</span></div></div><p>The expected value will be matched against the value with
 <a href="/assertions/any/to-satisfy/">to satisfy</a> semantics, so you can pass any of the
 values supported by <code>to satisfy</code>. To use strict <code>to satisfy</code> semantics, you can
 use the &quot;exhaustively&quot; flag:</p>
