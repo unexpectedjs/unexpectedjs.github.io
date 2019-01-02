@@ -205,6 +205,47 @@
             
         </ul>
     
+        <h3 class=""><a href="../">function</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../to-call-the-callback/">to call the callback</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-call-the-callback-with-error/">to call the callback with error</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-call-the-callback-without-error/">to call the callback without error</a>
+            </li>
+            
+            <li class="active">
+                <a href="/">to error</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-have-arity/">to have arity</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-throw/">to throw</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-throw-a/">to throw a</a>
+            </li>
+            
+            <li class="">
+                <a href="../when-called/">when called</a>
+            </li>
+            
+            <li class="">
+                <a href="../when-called-with/">when called with</a>
+            </li>
+            
+        </ul>
+    
         <h3 class=""><a href="../../boolean/">boolean</a></h3>
         <ul>
             
@@ -255,47 +296,6 @@
             
             <li class="">
                 <a href="../../object/to-have-values-satisfying/">to have values satisfying</a>
-            </li>
-            
-        </ul>
-    
-        <h3 class=""><a href="../">function</a></h3>
-        <ul>
-            
-            <li class="">
-                <a href="../to-call-the-callback/">to call the callback</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-call-the-callback-with-error/">to call the callback with error</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-call-the-callback-without-error/">to call the callback without error</a>
-            </li>
-            
-            <li class="active">
-                <a href="/">to error</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-have-arity/">to have arity</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-throw/">to throw</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-throw-a/">to throw a</a>
-            </li>
-            
-            <li class="">
-                <a href="../when-called/">when called</a>
-            </li>
-            
-            <li class="">
-                <a href="../when-called-with/">when called with</a>
             </li>
             
         </ul>
@@ -423,8 +423,8 @@ error out. When negating the assertion, you cannot provide a message.</p>
 <div class="code lang-javascript"><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>willNotBeRejected<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'not&nbsp;to&nbsp;error'</span><span style="color: #000000">);</span></div></div><p>In case of a failing expectation you get the following output:</p>
 <div class="code lang-javascript"><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>willBeRejected<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'not&nbsp;to&nbsp;error'</span><span style="color: #000000">);</span></div></div><div class="output"><div><span style="color: red; font-weight: bold">expected</span></div><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">willBeRejected</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>resolve<span style="color: #000000">,</span>&nbsp;reject<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">reject</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'The&nbsp;reject&nbsp;message'</span><span style="color: #000000">));</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">}</span></div><div><span style="color: red; font-weight: bold">not&nbsp;to&nbsp;error</span></div><div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: red; font-weight: bold">returned&nbsp;promise&nbsp;rejected&nbsp;with:&nbsp;</span>Error(<span style="color: #df5000">'The&nbsp;reject&nbsp;message'</span>)</div></div></div></div><p>You can pass in a function instead of the error message, and do more
 assertions on the error.</p>
-<div class="code lang-javascript"><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">willBeRejectedAsync</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>resolve<span style="color: #000000">,</span>&nbsp;reject<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">reject</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'async&nbsp;error'</span><span style="color: #000000">));</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">}</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>willBeRejectedAsync<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;error'</span><span style="color: #000000">,</span>&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>e<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>e<span style="color: #000000">.</span>message<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'async&nbsp;error'</span><span style="color: #000000">);</span></div><div><span style="color: #000000">}));</span></div></div><p>You can even do async assertions in the function that you pass in.</p>
-<div class="code lang-javascript"><div><span style="color: #a71d5d">var</span>&nbsp;errorCount&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">;</span></div><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">willBeRejectedAsync</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>resolve<span style="color: #000000">,</span>&nbsp;reject<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">var</span>&nbsp;error&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'async&nbsp;error'</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;errorCount&nbsp;<span style="color: #a71d5d">+=</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">;</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error<span style="color: #000000">.</span>errorCount&nbsp;<span style="color: #a71d5d">=</span>&nbsp;errorCount<span style="color: #000000">;</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">reject</span><span style="color: #000000">(</span>error<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">}</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>willBeRejectedAsync<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;error'</span><span style="color: #000000">,</span>&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>e<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>willBeRejectedAsync<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;error'</span><span style="color: #000000">,</span>&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>e2<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>e2<span style="color: #000000">.</span>errorCount<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;greater&nbsp;than'</span><span style="color: #000000">,</span>&nbsp;e<span style="color: #000000">.</span>errorCount<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">}));</span></div><div><span style="color: #000000">}));</span></div></div>
+<div class="code lang-javascript"><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">willBeRejectedAsync</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>resolve<span style="color: #000000">,</span>&nbsp;reject<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">reject</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'async&nbsp;error'</span><span style="color: #000000">));</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">}</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>willBeRejectedAsync<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;error'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">(</span>e<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>e<span style="color: #000000">.</span>message<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'async&nbsp;error'</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div></div><p>You can even do async assertions in the function that you pass in.</p>
+<div class="code lang-javascript"><div><span style="color: #a71d5d">var</span>&nbsp;errorCount&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">;</span></div><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">willBeRejectedAsync</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>resolve<span style="color: #000000">,</span>&nbsp;reject<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">var</span>&nbsp;error&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'async&nbsp;error'</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;errorCount&nbsp;<span style="color: #a71d5d">+=</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">;</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error<span style="color: #000000">.</span>errorCount&nbsp;<span style="color: #a71d5d">=</span>&nbsp;errorCount<span style="color: #000000">;</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">reject</span><span style="color: #000000">(</span>error<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">}</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>willBeRejectedAsync<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;error'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">(</span>e<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>willBeRejectedAsync<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;error'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">(</span>e2<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>e2<span style="color: #000000">.</span>errorCount<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;greater&nbsp;than'</span><span style="color: #000000">,</span>&nbsp;e<span style="color: #000000">.</span>errorCount<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">});</span></div><div><span style="color: #000000">});</span></div></div>
         </div>
     </div>
 </section>
