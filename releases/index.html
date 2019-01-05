@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="../static/normalize.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../static/main.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../static/bug-icon-black.ico">
+    <title>Releases</title>
+</head>
+<body class="sidebar-hidden theme-light">
+    <header>
+        <div class="logo-icon"></div>
+        <nav>
+            <ul>
+                <li class="menu-toggle-item">
+                    <button class="menu-toggle" onclick="toggleSidebar()"></button>
+                </li>
+                
+                <li class=""><a href="../">Unexpected</a></li>
+                
+                
+                <li class=""><a href="../assertions/any/to-be/">Assertions</a></li>
+                
+                
+                <li class=""><a href="../api/addAssertion/">API</a></li>
+                
+                
+                <li class=""><a href="../plugins/">Plugins</a></li>
+                
+            </ul>
+        </nav>
+        <div class="search" style="visibility: hidden">
+            <input id="search" placeholder="Search..." value="">
+            <div id="searchDropDown" class="dropDown">
+                <ul id="searchResults"></ul>
+            </div>
+        </div>
+    </header>
+
+<div class="main" tabindex="-1">
+    <div class="content">
+        <h1 id="releases">Releases</h1>
+<p>Here is a very high level overview of the major releases. See the
+<a href="https://github.com/unexpectedjs/unexpected/blob/master/CHANGELOG.md">changelog</a>
+for more details.</p>
+<h3 id="11-0-0">11.0.0</h3>
+<p>This release includes backwards-incompatible changes. There&#39;s a <a href="../migration/">migration
+guide</a> to help you upgrade.</p>
+<ul>
+<li>Drop support for node.js &lt; 6</li>
+<li>The main export is now a frozen <code>expect</code> function. To add assertions and
+install plugins, you must now <a href="../api/clone/"><code>clone()</code></a> it first 
+(<a href="https://github.com/unexpectedjs/unexpected/pull/517">#517</a>)</li>
+<li>Include non-enumerable properties when comparing objects
+(<a href="https://github.com/unexpectedjs/unexpected/pull/482">#482</a>)</li>
+<li><code>to satisfy</code> now compares functions by value. Functions in the spec that are
+to be executed must now be wrapped in <code>expect.it</code>
+(<a href="https://github.com/unexpectedjs/unexpected/pull/328">#328</a>)</li>
+<li>The <code>function</code> type is now modelled as a subtype of <code>object</code>. This means that
+all assertions defined for <code>object</code>, such as <a href="../assertions/object/to-have-properties/"><code>to have
+properties</code></a>, also work for
+functions now (<a href="https://github.com/unexpectedjs/unexpected/pull/448">#448</a>)</li>
+<li>Drop compatibility with pre-10.10.0 diff objects. This will mainly affect
+older plugins (<a href="https://github.com/unexpectedjs/unexpected/pull/407">#407</a>)</li>
+<li>Remove support for <code>expect.async</code>
+(<a href="https://github.com/unexpectedjs/unexpected/pull/566">#566</a>)</li>
+<li>Remove long-deprecated support for <code>this.subject</code> etc. in assertion handlers
+(<a href="https://github.com/unexpectedjs/unexpected/pull/567">#567</a>)</li>
+</ul>
+<h3 id="10-0-0">10.0.0</h3>
+<ul>
+<li>Assertions are now declared with explicit type requirements for
+the arguments as part of the pattern. This is a breaking change
+that removes support for the old <code>addAssertion</code> syntax where the
+subject type(s) were passed as the first argument.
+See <a href="./api/addAssertion/">addAssertion</a> for more
+information.</li>
+<li>The <code>to be &gt;</code>, <code>to be &gt;=</code>, <code>to be &lt;</code>, and <code>to be &lt;=</code> assertions
+have been removed as they clashed with the new type syntax.
+Please use the fully spelled-out variants: <code>to be greater than</code>,
+<code>to be less than or equal to</code>, etc.</li>
+<li>The <code>[not] to begin with</code>, <code>[not] to end with</code>, and
+<code>[not] to contain</code> assertions now require strings as the needle(s).
+Previously they supported any type, which would then be stringified.</li>
+<li>Inside an assertion you can now access the <code>errorMode</code>, <code>shift</code>,
+<code>flags</code>, <code>alternations</code> properties etc. via the <code>expect</code> passed
+to the assertion. They can still be accessed via <code>this</code> as
+previously, but that is deprecated. (This change actually
+debuted in 9.12.0).</li>
+<li>The <code>when passed as parameter(s) to</code>, <code>when called with</code>,
+<code>when decoded as</code> assertions can now be used standalone, ie. without delegating
+the result to another assertion in the same <code>expect</code> call.
+In that case they will provide the result as the fulfillment
+value of the promise.</li>
+</ul>
+<h3 id="9-0-0">9.0.0</h3>
+<ul>
+<li>Build all error messages lazily. This is an internal refactoring
+that makes it possible to generate very different output in the
+text, Ansi, and HTML modes using the magicpen
+<a href="https://github.com/sunesimonsen/magicpen#raw">raw</a> feature. This
+change mostly affects plugins, and we have updated all the official
+plugins accordingly, so please upgrade those to the latest version
+when you upgrade to Unexpected 9.</li>
+<li>Made it possible to tweak the default error message when creating
+assertions. See <a href="./api/addAssertion/">addAssertion</a> for more
+information.</li>
+<li>Expanded the <code>to have message</code> assertion defined for <code>Error</code>
+instances to allow matching a serialization other than plain text:
+<code>to have ansi message</code>, <code>to have html message</code>.</li>
+<li>The <code>to contain</code> assertion defined for strings: When the assertion fails,
+display a &quot;diff&quot; where partial matches are highlighted.</li>
+</ul>
+<h3 id="8-0-0">8.0.0</h3>
+<ul>
+<li>All errors originating from assertions are now instances of
+<a href="./api/UnexpectedError/"><code>UnexpectedError</code></a>, which can be manipulated before being
+serialized.</li>
+<li>Error messages and diffs are now built lazily, improving
+performance.</li>
+<li>Unexpected now detects created promises that were never returned and
+fails synchronously. This will uncover some extremely nasty bugs
+where the test suite succeeds when it should actually fail. This
+feature only works in <a href="https://mochajs.org/">Mocha</a> and <a href="https://jasmine.github.io/">Jasmine</a>.</li>
+<li>Deprecated error.output, please use error.getErrorMessage() instead.</li>
+<li>Deprecated error.label, please use error.getLabel() instead.</li>
+<li><code>when decoded as</code>, <code>when called with</code>, <code>when passed as parameter to</code>, <code>when passed as parameters to</code>: Require the 4th argument to be
+a string specifying an assertion. Previously a function was also
+allowed, which turned out to be error prone. This also affects all
+plugins that use the internal function <code>Assertion.prototype.shift</code>
+to delegate to other assertions.</li>
+<li>Nested error mode: Don&#39;t repeat the subject when it takes up
+multiple lines and is identical to the parent subject.</li>
+<li>Added a new <code>bubbleThrough</code> error mode that will make the error
+bubble all the way to the top, mainly useful internally.</li>
+<li>Added <a href="./assertions/function/to-error/"><code>to error</code></a> assertion.</li>
+<li>Minor bugfixes and output tweaks.</li>
+</ul>
+<h3 id="7-0-0">7.0.0</h3>
+<ul>
+<li>Support for
+<a href="./api/addAssertion/#asynchronous-assertions">asynchronous assertions using promises</a>.
+All built-in assertions that delegate to other assertions (such as <code>to satisfy</code>)
+have been rewritten to support this. The change is fully backwards compatible.</li>
+<li>Removed support for the <code>to be an array of</code> and
+<code>to be an array of (strings|numbers|...)</code> assertions. There are better and
+more flexible alternatives.</li>
+<li>Renamed assertions so that the subject type isn&#39;t mentioned in the assertion name.
+The old names are kept around as aliases for now. These assertions are affected:<ul>
+<li><code>to be an array whose items satisfy</code> =&gt; <code>to have items satisfying</code></li>
+<li><code>to be an (object|hash|map) whose keys satisfy</code> =&gt; <code>to have keys satisfying</code></li>
+<li><code>to be an (object|hash|map) whose values satisfy</code> =&gt; <code>to have values satisfying</code>
+Also, these 3 assertions no longer pass for empty collections.</li>
+</ul>
+</li>
+<li>New <code>when passed as parameter to constructor</code> and <code>when passed as parameter to async</code> &quot;adverbial&quot; assertions.</li>
+<li>New <code>when decoded as</code> &quot;adverbial&quot; assertion for <code>Buffer</code> instances.</li>
+<li>New <code>to have message</code> assertion defined for <code>Error</code> instances.</li>
+<li>A lot of output improvements and minor tweaks.</li>
+</ul>
+<h3 id="6-0-0">6.0.0</h3>
+<ul>
+<li>New documentation and <a href="https://unexpected.js.org/">corresponding site</a>.</li>
+<li>Use <code>Object.is</code>/the <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">SameValue algorithm</a> when checking equality of primitive values (the <code>to be</code> and <code>to equal</code> assertions).</li>
+<li>Tweaked the output of numerous assertions.</li>
+<li>Constrained <code>to be empty</code> and <code>to have length</code> to only work with strings and array-like objects.</li>
+<li>Renamed the <code>arrayLike</code> type to <code>array-like</code>.</li>
+<li>Changed style names and added theming support (mostly internal).</li>
+<li>Removed grammatically incorrect assertions.</li>
+</ul>
+
+    </div>
+    <a class="github-ribbon" href="https://github.com/unexpectedjs/unexpected"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+</div>
+<script type="text/javascript">
+    baseUrl = '..';
+</script>
+<script type="text/javascript" src="../static/toggleSidebar.js"></script>
+<script type="text/javascript" src="../static/rememberScrollPosition.js"></script>
+<script type="text/javascript" src="../static/focusMain.js"></script>
+<script type="text/javascript" src="../static/search.js"></script>
+</body>
+</html>
+

@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../../static/bug-icon-black.ico">
     <title>array-like - to have an item satisfying</title>
 </head>
-<body class="sidebar-hidden has-sidebar"> 
+<body class="sidebar-hidden has-sidebar">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -205,47 +205,6 @@
             
         </ul>
     
-        <h3 class=""><a href="../../function/">function</a></h3>
-        <ul>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback/">to call the callback</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback-with-error/">to call the callback with error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback-without-error/">to call the callback without error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-error/">to error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-have-arity/">to have arity</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-throw/">to throw</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-throw-a/">to throw a</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/when-called/">when called</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/when-called-with/">when called with</a>
-            </li>
-            
-        </ul>
-    
         <h3 class=""><a href="../../boolean/">boolean</a></h3>
         <ul>
             
@@ -296,6 +255,47 @@
             
             <li class="">
                 <a href="../../object/to-have-values-satisfying/">to have values satisfying</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="../../function/">function</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback/">to call the callback</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback-with-error/">to call the callback with error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback-without-error/">to call the callback without error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-error/">to error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-have-arity/">to have arity</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-throw/">to throw</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-throw-a/">to throw a</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/when-called/">when called</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/when-called-with/">when called with</a>
             </li>
             
         </ul>
@@ -362,7 +362,7 @@
             </li>
             
             <li class="active">
-                <a href="/">to have an item satisfying</a>
+                <a href="./">to have an item satisfying</a>
             </li>
             
             <li class="">
@@ -413,8 +413,8 @@
             <p>Asserts an array (or array-like object) contains at least one item that satisfies
 a given value, function or other assertion.</p>
 <p>Note that this assertion fails if passed an empty array as the subject.</p>
-<div class="code lang-javascript"><div><span style="color: #000000">expect</span><span style="color: #000000">([{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #000000">{</span>&nbsp;b<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #000000">}],</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #000000">{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">([</span><span style="color: #0086b3">0</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">3</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">4</span><span style="color: #000000">],</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">([</span><span style="color: #0086b3">0</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">3</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">4</span><span style="color: #000000">],</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">(</span>item<span style="color: #000000">,</span>&nbsp;index<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>item<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">[[</span><span style="color: #0086b3">1</span><span style="color: #000000">],</span>&nbsp;<span style="color: #000000">[</span><span style="color: #df5000">'foo'</span><span style="color: #000000">]],</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span></div><div><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">[</span><span style="color: #a71d5d">-</span><span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">-</span><span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">3</span><span style="color: #000000">],</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">).</span><span style="color: #000000">and</span><span style="color: #000000">(</span><span style="color: #df5000">'to&nbsp;be&nbsp;positive'</span><span style="color: #000000">)</span></div><div><span style="color: #000000">);</span></div></div><p>The expected value will be matched against the value with
-<a href="/assertions/any/to-satisfy/">to satisfy</a> semantics, so you can pass any of the
+<div class="code lang-javascript"><div><span style="color: #000000">expect</span><span style="color: #000000">([{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #000000">{</span>&nbsp;b<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #000000">}],</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #000000">{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">([</span><span style="color: #0086b3">0</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">3</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">4</span><span style="color: #000000">],</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">([</span><span style="color: #0086b3">0</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">3</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">4</span><span style="color: #000000">],</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span>item<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>item<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">);</span></div><div><span style="color: #000000">}));</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">[[</span><span style="color: #0086b3">1</span><span style="color: #000000">],</span>&nbsp;<span style="color: #000000">[</span><span style="color: #df5000">'foo'</span><span style="color: #000000">]],</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span></div><div><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;<span style="color: #000000">[</span><span style="color: #a71d5d">-</span><span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">-</span><span style="color: #0086b3">2</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">3</span><span style="color: #000000">],</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #df5000">'to&nbsp;be&nbsp;a&nbsp;number'</span><span style="color: #000000">).</span><span style="color: #000000">and</span><span style="color: #000000">(</span><span style="color: #df5000">'to&nbsp;be&nbsp;positive'</span><span style="color: #000000">)</span></div><div><span style="color: #000000">);</span></div></div><p>The expected value will be matched against the value with
+<a href="../../any/to-satisfy/">to satisfy</a> semantics, so you can pass any of the
 values supported by <code>to satisfy</code>. To use strict <code>to satisfy</code> semantics, you can
 use the &quot;exhaustively&quot; flag:</p>
 <div class="code lang-javascript"><div><span style="color: #000000">expect</span><span style="color: #000000">([{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;b<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #000000">}],</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #000000">{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">});</span></div></div><div class="code lang-javascript"><div><span style="color: #000000">expect</span><span style="color: #000000">([{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">,</span>&nbsp;b<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">2</span>&nbsp;<span style="color: #000000">}],</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;exhaustively&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #000000">{</span>&nbsp;a<span style="color: #000000">:</span>&nbsp;<span style="color: #0086b3">1</span>&nbsp;<span style="color: #000000">});</span></div></div><div class="output"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;[&nbsp;{&nbsp;<span style="color: #555">a</span>:&nbsp;<span style="color: #0086b3">1</span>,&nbsp;<span style="color: #555">b</span>:&nbsp;<span style="color: #0086b3">2</span>&nbsp;}&nbsp;]&nbsp;<span style="color: red; font-weight: bold">to&nbsp;have&nbsp;a&nbsp;value&nbsp;exhaustively&nbsp;satisfying</span>&nbsp;{&nbsp;<span style="color: #555">a</span>:&nbsp;<span style="color: #0086b3">1</span>&nbsp;}</div></div><p>In case of a failing expectation you get the following output:</p>

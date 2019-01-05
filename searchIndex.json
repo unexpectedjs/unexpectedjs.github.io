@@ -12,10 +12,6 @@
     "url": "/api/addType/"
   },
   {
-    "label": "async (api)",
-    "url": "/api/async/"
-  },
-  {
     "label": "child (api)",
     "url": "/api/child/"
   },

@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../../static/bug-icon-black.ico">
     <title>Promise - to be rejected with</title>
 </head>
-<body class="sidebar-hidden has-sidebar"> 
+<body class="sidebar-hidden has-sidebar">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -205,47 +205,6 @@
             
         </ul>
     
-        <h3 class=""><a href="../../function/">function</a></h3>
-        <ul>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback/">to call the callback</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback-with-error/">to call the callback with error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-call-the-callback-without-error/">to call the callback without error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-error/">to error</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-have-arity/">to have arity</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-throw/">to throw</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/to-throw-a/">to throw a</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/when-called/">when called</a>
-            </li>
-            
-            <li class="">
-                <a href="../../function/when-called-with/">when called with</a>
-            </li>
-            
-        </ul>
-    
         <h3 class=""><a href="../../boolean/">boolean</a></h3>
         <ul>
             
@@ -300,6 +259,47 @@
             
         </ul>
     
+        <h3 class=""><a href="../../function/">function</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback/">to call the callback</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback-with-error/">to call the callback with error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-call-the-callback-without-error/">to call the callback without error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-error/">to error</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-have-arity/">to have arity</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-throw/">to throw</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/to-throw-a/">to throw a</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/when-called/">when called</a>
+            </li>
+            
+            <li class="">
+                <a href="../../function/when-called-with/">when called with</a>
+            </li>
+            
+        </ul>
+    
         <h3 class=""><a href="../">Promise</a></h3>
         <ul>
             
@@ -320,7 +320,7 @@
             </li>
             
             <li class="active">
-                <a href="/">to be rejected with</a>
+                <a href="./">to be rejected with</a>
             </li>
             
             <li class="">
@@ -410,7 +410,7 @@
             
             <p>Asserts that a promise is rejected with a specific reason (error):</p>
 <div class="code lang-javascript"><div><span style="color: #a71d5d">var</span>&nbsp;promiseThatWillBeRejectedWithAReason&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;resolve<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;reject</div><div><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">reject</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'Oh&nbsp;dear'</span><span style="color: #000000">));</span></div><div>&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">10</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;promiseThatWillBeRejectedWithAReason<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;rejected&nbsp;with'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'Oh&nbsp;dear'</span><span style="color: #000000">)</span></div><div><span style="color: #000000">);</span></div></div><p>The expected reason will be matched against the rejection reason with
-<a href="/assertions/any/to-satisfy/">to satisfy</a> semantics, so you can pass any of the
+<a href="../../any/to-satisfy/">to satisfy</a> semantics, so you can pass any of the
 values supported by <code>to satisfy</code>:</p>
 <div class="code lang-javascript"><div><span style="color: #a71d5d">var</span>&nbsp;promiseThatWillBeRejectedWithAReason&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;resolve<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;reject</div><div><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">reject</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'Oh&nbsp;dear'</span><span style="color: #000000">));</span></div><div>&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">10</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;promiseThatWillBeRejectedWithAReason<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;rejected&nbsp;with'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #183691">/dear/</span></div><div><span style="color: #000000">);</span></div></div><p>You get a nice diff if the assertion fails:</p>
 <div class="code lang-javascript"><div><span style="color: #a71d5d">var</span>&nbsp;promiseThatWillBeRejectedWithAReason&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;resolve<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;reject</div><div><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">reject</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'Oh&nbsp;dear'</span><span style="color: #000000">));</span></div><div>&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">10</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;promiseThatWillBeRejectedWithAReason<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;rejected&nbsp;with'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'bugger'</span><span style="color: #000000">)</span></div><div><span style="color: #000000">);</span></div></div><div class="output"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: #795da3">Promise</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;be&nbsp;rejected&nbsp;with</span>&nbsp;Error(<span style="color: #df5000">'bugger'</span>)</div><div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;Error(<span style="color: #df5000">'Oh&nbsp;dear'</span>)&nbsp;<span style="color: red; font-weight: bold">to&nbsp;satisfy</span>&nbsp;Error(<span style="color: #df5000">'bugger'</span>)</div><div>&nbsp;</div><div>Error({</div><div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: #555">message</span>:&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: #df5000">'Oh&nbsp;dear'</span></div></div>&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: red; font-weight: bold">//</span></div><div><span style="color: red; font-weight: bold">//</span></div><div><span style="color: red; font-weight: bold">//</span></div><div><span style="color: red; font-weight: bold">//</span></div></div>&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: red; font-weight: bold">should&nbsp;equal</span>&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: #df5000">'bugger'</span></div></div></div><div>&nbsp;</div><div><span style="background-color: red; color: white">Oh&nbsp;dear</span></div><div><span style="background-color: green; color: white">bugger</span></div></div></div></div></div><div>})</div></div></div></div>

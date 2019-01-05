@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../../static/bug-icon-black.ico">
     <title>function - when called</title>
 </head>
-<body class="sidebar-hidden has-sidebar"> 
+<body class="sidebar-hidden has-sidebar">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -205,47 +205,6 @@
             
         </ul>
     
-        <h3 class=""><a href="../">function</a></h3>
-        <ul>
-            
-            <li class="">
-                <a href="../to-call-the-callback/">to call the callback</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-call-the-callback-with-error/">to call the callback with error</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-call-the-callback-without-error/">to call the callback without error</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-error/">to error</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-have-arity/">to have arity</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-throw/">to throw</a>
-            </li>
-            
-            <li class="">
-                <a href="../to-throw-a/">to throw a</a>
-            </li>
-            
-            <li class="active">
-                <a href="/">when called</a>
-            </li>
-            
-            <li class="">
-                <a href="../when-called-with/">when called with</a>
-            </li>
-            
-        </ul>
-    
         <h3 class=""><a href="../../boolean/">boolean</a></h3>
         <ul>
             
@@ -296,6 +255,47 @@
             
             <li class="">
                 <a href="../../object/to-have-values-satisfying/">to have values satisfying</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="../">function</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../to-call-the-callback/">to call the callback</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-call-the-callback-with-error/">to call the callback with error</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-call-the-callback-without-error/">to call the callback without error</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-error/">to error</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-have-arity/">to have arity</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-throw/">to throw</a>
+            </li>
+            
+            <li class="">
+                <a href="../to-throw-a/">to throw a</a>
+            </li>
+            
+            <li class="active">
+                <a href="./">when called</a>
+            </li>
+            
+            <li class="">
+                <a href="../when-called-with/">when called with</a>
             </li>
             
         </ul>
@@ -412,7 +412,7 @@
 <div class="code lang-javascript"><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">giveMeFive</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #0086b3">5</span><span style="color: #000000">;</span></div><div><span style="color: #000000">}</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span>giveMeFive<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'when&nbsp;called'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">5</span><span style="color: #000000">);</span></div></div><p>In case of a failing expectation you get the following output:</p>
 <div class="code lang-javascript"><div><span style="color: #000000">expect</span><span style="color: #000000">(</span>giveMeFive<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'when&nbsp;called'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">7</span><span style="color: #000000">);</span></div></div><div class="output"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">giveMeFive</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span>&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #0086b3">5</span><span style="color: #000000">;</span>&nbsp;<span style="color: #000000">}</span>&nbsp;<span style="color: red; font-weight: bold">when&nbsp;called</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;equal</span>&nbsp;<span style="color: #0086b3">7</span></div><div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: #0086b3">5</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;equal</span>&nbsp;<span style="color: #0086b3">7</span></div></div></div></div><p>If you don&#39;t provide an assertion to delegate to, the return value will be provided
 as the fulfillment value of the promise:</p>
-<div class="code lang-javascript"><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>giveMeFive<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'called'</span><span style="color: #000000">).</span><span style="color: #000000">then</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>result<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>result<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">5</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div></div><p>When this assertion in used together with <a href="/assertions/any/to-satisfy">to satisfy</a>
+<div class="code lang-javascript"><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>giveMeFive<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'called'</span><span style="color: #000000">).</span><span style="color: #000000">then</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>result<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>result<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #0086b3">5</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div></div><p>When this assertion in used together with <a href="../../any/to-satisfy/">to satisfy</a>
 we make sure that <code>this</code> is bound correctly:</p>
 <div class="code lang-javascript"><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">Person</span><span style="color: #000000">(</span>name<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">this</span><span style="color: #000000">.</span>name&nbsp;<span style="color: #a71d5d">=</span>&nbsp;name<span style="color: #000000">;</span></div><div><span style="color: #000000">}</span></div><div>&nbsp;</div><div>Person<span style="color: #000000">.</span>prototype<span style="color: #000000">.</span><span style="color: #000000">toString</span>&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #a71d5d">function</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">return</span>&nbsp;<span style="color: #a71d5d">this</span><span style="color: #000000">.</span>name<span style="color: #000000">;</span></div><div><span style="color: #000000">};</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Person<span style="color: #000000">(</span><span style="color: #df5000">'John&nbsp;Doe'</span><span style="color: #000000">),</span>&nbsp;<span style="color: #df5000">'to&nbsp;satisfy'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;toString<span style="color: #000000">:</span>&nbsp;expect<span style="color: #000000">.</span><span style="color: #000000">it</span><span style="color: #000000">(</span><span style="color: #df5000">'when&nbsp;called&nbsp;to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'John&nbsp;Doe'</span><span style="color: #000000">)</span></div><div><span style="color: #000000">});</span></div></div>
         </div>
