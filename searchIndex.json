@@ -72,8 +72,8 @@
     "url": "/api/withError/"
   },
   {
-    "label": "to be infinite (number)",
-    "url": "/assertions/number/to-be-infinite/"
+    "label": "to throw a (function)",
+    "url": "/assertions/function/to-throw-a/"
   },
   {
     "label": "when decoded as (Buffer)",
@@ -204,6 +204,42 @@
     "url": "/assertions/boolean/to-be-true/"
   },
   {
+    "label": "to call the callback with error (function)",
+    "url": "/assertions/function/to-call-the-callback-with-error/"
+  },
+  {
+    "label": "to call the callback without error (function)",
+    "url": "/assertions/function/to-call-the-callback-without-error/"
+  },
+  {
+    "label": "to call the callback (function)",
+    "url": "/assertions/function/to-call-the-callback/"
+  },
+  {
+    "label": "to error (function)",
+    "url": "/assertions/function/to-error/"
+  },
+  {
+    "label": "to have arity (function)",
+    "url": "/assertions/function/to-have-arity/"
+  },
+  {
+    "label": "to have message (Error)",
+    "url": "/assertions/Error/to-have-message/"
+  },
+  {
+    "label": "to throw (function)",
+    "url": "/assertions/function/to-throw/"
+  },
+  {
+    "label": "when called with (function)",
+    "url": "/assertions/function/when-called-with/"
+  },
+  {
+    "label": "when called (function)",
+    "url": "/assertions/function/when-called/"
+  },
+  {
     "label": "to be NaN (number)",
     "url": "/assertions/number/to-be-NaN/"
   },
@@ -224,8 +260,8 @@
     "url": "/assertions/number/to-be-greater-than/"
   },
   {
-    "label": "to have message (Error)",
-    "url": "/assertions/Error/to-have-message/"
+    "label": "to be infinite (number)",
+    "url": "/assertions/number/to-be-infinite/"
   },
   {
     "label": "to be less than or equal to (number)",
@@ -338,41 +374,5 @@
   {
     "label": "to start with (string)",
     "url": "/assertions/string/to-start-with/"
-  },
-  {
-    "label": "to call the callback with error (function)",
-    "url": "/assertions/function/to-call-the-callback-with-error/"
-  },
-  {
-    "label": "to call the callback without error (function)",
-    "url": "/assertions/function/to-call-the-callback-without-error/"
-  },
-  {
-    "label": "to call the callback (function)",
-    "url": "/assertions/function/to-call-the-callback/"
-  },
-  {
-    "label": "to error (function)",
-    "url": "/assertions/function/to-error/"
-  },
-  {
-    "label": "to have arity (function)",
-    "url": "/assertions/function/to-have-arity/"
-  },
-  {
-    "label": "to throw a (function)",
-    "url": "/assertions/function/to-throw-a/"
-  },
-  {
-    "label": "to throw (function)",
-    "url": "/assertions/function/to-throw/"
-  },
-  {
-    "label": "when called with (function)",
-    "url": "/assertions/function/when-called-with/"
-  },
-  {
-    "label": "when called (function)",
-    "url": "/assertions/function/when-called/"
   }
 ]
