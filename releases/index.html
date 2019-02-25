@@ -50,7 +50,7 @@ guide</a> to help you upgrade.</p>
 <ul>
 <li>Drop support for node.js &lt; 6</li>
 <li>The main export is now a frozen <code>expect</code> function. To add assertions and
-install plugins, you must now <a href="../api/clone/"><code>clone()</code></a> it first 
+install plugins, you must now <a href="../api/clone/"><code>clone()</code></a> it first
 (<a href="https://github.com/unexpectedjs/unexpected/pull/517">#517</a>)</li>
 <li>Include non-enumerable properties when comparing objects
 (<a href="https://github.com/unexpectedjs/unexpected/pull/482">#482</a>)</li>
@@ -58,8 +58,7 @@ install plugins, you must now <a href="../api/clone/"><code>clone()</code></a> i
 to be executed must now be wrapped in <code>expect.it</code>
 (<a href="https://github.com/unexpectedjs/unexpected/pull/328">#328</a>)</li>
 <li>The <code>function</code> type is now modelled as a subtype of <code>object</code>. This means that
-all assertions defined for <code>object</code>, such as <a href="../assertions/object/to-have-properties/"><code>to have
-properties</code></a>, also work for
+all assertions defined for <code>object</code>, such as <a href="../assertions/object/to-have-properties/"><code>to have properties</code></a>, also work for
 functions now (<a href="https://github.com/unexpectedjs/unexpected/pull/448">#448</a>)</li>
 <li>Drop compatibility with pre-10.10.0 diff objects. This will mainly affect
 older plugins (<a href="https://github.com/unexpectedjs/unexpected/pull/407">#407</a>)</li>
