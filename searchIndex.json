@@ -72,8 +72,8 @@
     "url": "/api/withError/"
   },
   {
-    "label": "to be infinite (number)",
-    "url": "/assertions/number/to-be-infinite/"
+    "label": "to throw a (function)",
+    "url": "/assertions/function/to-throw-a/"
   },
   {
     "label": "when decoded as (Buffer)",
@@ -110,42 +110,6 @@
   {
     "label": "when rejected (Promise)",
     "url": "/assertions/Promise/when-rejected/"
-  },
-  {
-    "label": "to be empty (array-like)",
-    "url": "/assertions/array-like/to-be-empty/"
-  },
-  {
-    "label": "to contain (array-like)",
-    "url": "/assertions/array-like/to-contain/"
-  },
-  {
-    "label": "to be non-empty (array-like)",
-    "url": "/assertions/array-like/to-be-non-empty/"
-  },
-  {
-    "label": "to have an item satisfying (array-like)",
-    "url": "/assertions/array-like/to-have-an-item-satisfying/"
-  },
-  {
-    "label": "to have items satisfying (array-like)",
-    "url": "/assertions/array-like/to-have-items-satisfying/"
-  },
-  {
-    "label": "to have length (array-like)",
-    "url": "/assertions/array-like/to-have-length/"
-  },
-  {
-    "label": "when passed as parameters to (array-like)",
-    "url": "/assertions/array-like/when-passed-as-parameters-to/"
-  },
-  {
-    "label": "when sorted by (array-like)",
-    "url": "/assertions/array-like/when-sorted-by/"
-  },
-  {
-    "label": "when sorted (array-like)",
-    "url": "/assertions/array-like/when-sorted/"
   },
   {
     "label": "to be a (any)",
@@ -196,12 +160,84 @@
     "url": "/assertions/any/when-passed-as-parameter-to/"
   },
   {
+    "label": "to be empty (array-like)",
+    "url": "/assertions/array-like/to-be-empty/"
+  },
+  {
+    "label": "to be non-empty (array-like)",
+    "url": "/assertions/array-like/to-be-non-empty/"
+  },
+  {
+    "label": "to contain (array-like)",
+    "url": "/assertions/array-like/to-contain/"
+  },
+  {
+    "label": "to have an item satisfying (array-like)",
+    "url": "/assertions/array-like/to-have-an-item-satisfying/"
+  },
+  {
+    "label": "to have items satisfying (array-like)",
+    "url": "/assertions/array-like/to-have-items-satisfying/"
+  },
+  {
+    "label": "to have length (array-like)",
+    "url": "/assertions/array-like/to-have-length/"
+  },
+  {
+    "label": "when passed as parameters to (array-like)",
+    "url": "/assertions/array-like/when-passed-as-parameters-to/"
+  },
+  {
+    "label": "when sorted by (array-like)",
+    "url": "/assertions/array-like/when-sorted-by/"
+  },
+  {
+    "label": "when sorted (array-like)",
+    "url": "/assertions/array-like/when-sorted/"
+  },
+  {
     "label": "to be false (boolean)",
     "url": "/assertions/boolean/to-be-false/"
   },
   {
     "label": "to be true (boolean)",
     "url": "/assertions/boolean/to-be-true/"
+  },
+  {
+    "label": "to call the callback with error (function)",
+    "url": "/assertions/function/to-call-the-callback-with-error/"
+  },
+  {
+    "label": "to call the callback without error (function)",
+    "url": "/assertions/function/to-call-the-callback-without-error/"
+  },
+  {
+    "label": "to call the callback (function)",
+    "url": "/assertions/function/to-call-the-callback/"
+  },
+  {
+    "label": "to error (function)",
+    "url": "/assertions/function/to-error/"
+  },
+  {
+    "label": "to have arity (function)",
+    "url": "/assertions/function/to-have-arity/"
+  },
+  {
+    "label": "to have message (Error)",
+    "url": "/assertions/Error/to-have-message/"
+  },
+  {
+    "label": "to throw (function)",
+    "url": "/assertions/function/to-throw/"
+  },
+  {
+    "label": "when called with (function)",
+    "url": "/assertions/function/when-called-with/"
+  },
+  {
+    "label": "when called (function)",
+    "url": "/assertions/function/when-called/"
   },
   {
     "label": "to be NaN (number)",
@@ -224,8 +260,8 @@
     "url": "/assertions/number/to-be-greater-than/"
   },
   {
-    "label": "to have message (Error)",
-    "url": "/assertions/Error/to-have-message/"
+    "label": "to be infinite (number)",
+    "url": "/assertions/number/to-be-infinite/"
   },
   {
     "label": "to be less than or equal to (number)",
@@ -284,42 +320,6 @@
     "url": "/assertions/object/to-have-values-satisfying/"
   },
   {
-    "label": "to call the callback with error (function)",
-    "url": "/assertions/function/to-call-the-callback-with-error/"
-  },
-  {
-    "label": "to call the callback (function)",
-    "url": "/assertions/function/to-call-the-callback/"
-  },
-  {
-    "label": "to call the callback without error (function)",
-    "url": "/assertions/function/to-call-the-callback-without-error/"
-  },
-  {
-    "label": "to error (function)",
-    "url": "/assertions/function/to-error/"
-  },
-  {
-    "label": "to have arity (function)",
-    "url": "/assertions/function/to-have-arity/"
-  },
-  {
-    "label": "to throw a (function)",
-    "url": "/assertions/function/to-throw-a/"
-  },
-  {
-    "label": "to throw (function)",
-    "url": "/assertions/function/to-throw/"
-  },
-  {
-    "label": "when called with (function)",
-    "url": "/assertions/function/when-called-with/"
-  },
-  {
-    "label": "when called (function)",
-    "url": "/assertions/function/when-called/"
-  },
-  {
     "label": "to be empty (string)",
     "url": "/assertions/string/to-be-empty/"
   },
@@ -344,12 +344,12 @@
     "url": "/assertions/string/to-be-non-empty/"
   },
   {
-    "label": "to be (string)",
-    "url": "/assertions/string/to-be/"
-  },
-  {
     "label": "to be within (string)",
     "url": "/assertions/string/to-be-within/"
+  },
+  {
+    "label": "to be (string)",
+    "url": "/assertions/string/to-be/"
   },
   {
     "label": "to begin with (string)",
