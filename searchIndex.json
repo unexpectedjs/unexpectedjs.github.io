@@ -76,8 +76,8 @@
     "url": "/assertions/function/to-throw-a/"
   },
   {
-    "label": "to have message (Error)",
-    "url": "/assertions/Error/to-have-message/"
+    "label": "when decoded as (Buffer)",
+    "url": "/assertions/Buffer/when-decoded-as/"
   },
   {
     "label": "to be fulfilled with value satisfying (Promise)",
@@ -224,8 +224,8 @@
     "url": "/assertions/function/to-have-arity/"
   },
   {
-    "label": "when decoded as (Buffer)",
-    "url": "/assertions/Buffer/when-decoded-as/"
+    "label": "to have message (Error)",
+    "url": "/assertions/Error/to-have-message/"
   },
   {
     "label": "to throw (function)",
