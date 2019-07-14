@@ -76,28 +76,28 @@
     "url": "/assertions/function/to-throw-a/"
   },
   {
-    "label": "to have message (Error)",
-    "url": "/assertions/Error/to-have-message/"
+    "label": "when decoded as (Buffer)",
+    "url": "/assertions/Buffer/when-decoded-as/"
   },
   {
-    "label": "to be fulfilled with (Promise)",
-    "url": "/assertions/Promise/to-be-fulfilled-with/"
+    "label": "to be fulfilled with value satisfying (Promise)",
+    "url": "/assertions/Promise/to-be-fulfilled-with-value-satisfying/"
   },
   {
     "label": "to be fulfilled (Promise)",
     "url": "/assertions/Promise/to-be-fulfilled/"
   },
   {
-    "label": "to be rejected with (Promise)",
-    "url": "/assertions/Promise/to-be-rejected-with/"
+    "label": "to be fulfilled with (Promise)",
+    "url": "/assertions/Promise/to-be-fulfilled-with/"
   },
   {
     "label": "to be rejected with error satisfying (Promise)",
     "url": "/assertions/Promise/to-be-rejected-with-error-satisfying/"
   },
   {
-    "label": "to be fulfilled with value satisfying (Promise)",
-    "url": "/assertions/Promise/to-be-fulfilled-with-value-satisfying/"
+    "label": "to be rejected with (Promise)",
+    "url": "/assertions/Promise/to-be-rejected-with/"
   },
   {
     "label": "to be rejected (Promise)",
@@ -124,12 +124,12 @@
     "url": "/assertions/array-like/to-be-empty/"
   },
   {
-    "label": "to be non-empty (array-like)",
-    "url": "/assertions/array-like/to-be-non-empty/"
-  },
-  {
     "label": "to contain (array-like)",
     "url": "/assertions/array-like/to-contain/"
+  },
+  {
+    "label": "to be non-empty (array-like)",
+    "url": "/assertions/array-like/to-be-non-empty/"
   },
   {
     "label": "to have an item satisfying (array-like)",
@@ -156,12 +156,12 @@
     "url": "/assertions/array-like/when-sorted/"
   },
   {
-    "label": "to be defined (any)",
-    "url": "/assertions/any/to-be-defined/"
-  },
-  {
     "label": "to be a (any)",
     "url": "/assertions/any/to-be-a/"
+  },
+  {
+    "label": "to be defined (any)",
+    "url": "/assertions/any/to-be-defined/"
   },
   {
     "label": "to be falsy (any)",
@@ -212,20 +212,20 @@
     "url": "/assertions/function/to-call-the-callback-without-error/"
   },
   {
-    "label": "to call the callback (function)",
-    "url": "/assertions/function/to-call-the-callback/"
-  },
-  {
     "label": "to error (function)",
     "url": "/assertions/function/to-error/"
+  },
+  {
+    "label": "to call the callback (function)",
+    "url": "/assertions/function/to-call-the-callback/"
   },
   {
     "label": "to have arity (function)",
     "url": "/assertions/function/to-have-arity/"
   },
   {
-    "label": "when decoded as (Buffer)",
-    "url": "/assertions/Buffer/when-decoded-as/"
+    "label": "to have message (Error)",
+    "url": "/assertions/Error/to-have-message/"
   },
   {
     "label": "to throw (function)",
@@ -264,20 +264,20 @@
     "url": "/assertions/number/to-be-infinite/"
   },
   {
-    "label": "to be less than or equal to (number)",
-    "url": "/assertions/number/to-be-less-than-or-equal-to/"
-  },
-  {
     "label": "to be less than (number)",
     "url": "/assertions/number/to-be-less-than/"
   },
   {
-    "label": "to be negative (number)",
-    "url": "/assertions/number/to-be-negative/"
-  },
-  {
     "label": "to be positive (number)",
     "url": "/assertions/number/to-be-positive/"
+  },
+  {
+    "label": "to be less than or equal to (number)",
+    "url": "/assertions/number/to-be-less-than-or-equal-to/"
+  },
+  {
+    "label": "to be negative (number)",
+    "url": "/assertions/number/to-be-negative/"
   },
   {
     "label": "to be within (number)",
@@ -288,12 +288,12 @@
     "url": "/assertions/object/to-be-canonical/"
   },
   {
-    "label": "to be empty (object)",
-    "url": "/assertions/object/to-be-empty/"
-  },
-  {
     "label": "to have a value satisfying (object)",
     "url": "/assertions/object/to-have-a-value-satisfying/"
+  },
+  {
+    "label": "to be empty (object)",
+    "url": "/assertions/object/to-be-empty/"
   },
   {
     "label": "to have key (object)",
