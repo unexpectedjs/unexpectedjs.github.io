@@ -252,12 +252,12 @@
     "url": "/assertions/number/to-be-finite/"
   },
   {
-    "label": "to be greater than (number)",
-    "url": "/assertions/number/to-be-greater-than/"
-  },
-  {
     "label": "to be greater than or equal to (number)",
     "url": "/assertions/number/to-be-greater-than-or-equal-to/"
+  },
+  {
+    "label": "to be greater than (number)",
+    "url": "/assertions/number/to-be-greater-than/"
   },
   {
     "label": "to be infinite (number)",
