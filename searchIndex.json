@@ -264,24 +264,28 @@
     "url": "/assertions/number/to-be-infinite/"
   },
   {
-    "label": "to be less than or equal to (number)",
-    "url": "/assertions/number/to-be-less-than-or-equal-to/"
-  },
-  {
     "label": "to be less than (number)",
     "url": "/assertions/number/to-be-less-than/"
+  },
+  {
+    "label": "to be less than or equal to (number)",
+    "url": "/assertions/number/to-be-less-than-or-equal-to/"
   },
   {
     "label": "to be negative (number)",
     "url": "/assertions/number/to-be-negative/"
   },
   {
+    "label": "to be within (number)",
+    "url": "/assertions/number/to-be-within/"
+  },
+  {
     "label": "to be positive (number)",
     "url": "/assertions/number/to-be-positive/"
   },
   {
-    "label": "to be within (number)",
-    "url": "/assertions/number/to-be-within/"
+    "label": "to have a value satisfying (object)",
+    "url": "/assertions/object/to-have-a-value-satisfying/"
   },
   {
     "label": "to be canonical (object)",
@@ -290,10 +294,6 @@
   {
     "label": "to be empty (object)",
     "url": "/assertions/object/to-be-empty/"
-  },
-  {
-    "label": "to have a value satisfying (object)",
-    "url": "/assertions/object/to-have-a-value-satisfying/"
   },
   {
     "label": "to have key (object)",
@@ -312,12 +312,12 @@
     "url": "/assertions/object/to-have-properties/"
   },
   {
-    "label": "to have property (object)",
-    "url": "/assertions/object/to-have-property/"
-  },
-  {
     "label": "to have values satisfying (object)",
     "url": "/assertions/object/to-have-values-satisfying/"
+  },
+  {
+    "label": "to have property (object)",
+    "url": "/assertions/object/to-have-property/"
   },
   {
     "label": "to be empty (string)",
@@ -332,12 +332,12 @@
     "url": "/assertions/string/to-be-greater-than/"
   },
   {
-    "label": "to be less than or equal to (string)",
-    "url": "/assertions/string/to-be-less-than-or-equal-to/"
-  },
-  {
     "label": "to be less than (string)",
     "url": "/assertions/string/to-be-less-than/"
+  },
+  {
+    "label": "to be less than or equal to (string)",
+    "url": "/assertions/string/to-be-less-than-or-equal-to/"
   },
   {
     "label": "to be non-empty (string)",
@@ -368,11 +368,11 @@
     "url": "/assertions/string/to-have-length/"
   },
   {
-    "label": "to match (string)",
-    "url": "/assertions/string/to-match/"
-  },
-  {
     "label": "to start with (string)",
     "url": "/assertions/string/to-start-with/"
+  },
+  {
+    "label": "to match (string)",
+    "url": "/assertions/string/to-match/"
   }
 ]
