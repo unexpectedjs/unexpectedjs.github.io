@@ -48,7 +48,7 @@
 
 <h2 id="badges">Badges</h2>
 <p><a href="https://www.npmjs.com/package/unexpected"><img src="https://badge.fury.io/js/unexpected.svg" alt="NPM version"></a>
-<a href="https://travis-ci.org/unexpectedjs/unexpected"><img src="https://api.travis-ci.org/unexpectedjs/unexpected.svg?branch=master" alt="Build Status"></a>
+<a href="https://travis-ci.org/unexpectedjs/unexpected"><img src="https://github.com/unexpectedjs/unexpected/workflows/Tests/badge.svg" alt="Build Status"></a>
 <a href="https://coveralls.io/github/unexpectedjs/unexpected"><img src="https://coveralls.io/repos/unexpectedjs/unexpected/badge.svg" alt="Coverage Status"></a>
 <a href="https://david-dm.org/unexpectedjs/unexpected"><img src="https://david-dm.org/unexpectedjs/unexpected.svg" alt="Dependency Status"></a>
 <a href="https://gitter.im/unexpectedjs/unexpected?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a>
@@ -71,14 +71,14 @@
 <pre class="code lang-"><div>$&nbsp;npm&nbsp;install&nbsp;--save-dev&nbsp;unexpected</div></pre>
 
 <p>Then:</p>
-<pre class="code lang-javascript"><div><span style="color: #F92672">var</span>&nbsp;expect&nbsp;<span style="color: #F92672">=</span>&nbsp;require<span style="color: #999">(</span><span style="color: #E6DB74">'unexpected'</span><span style="color: #999">);</span></div></pre>
+<pre class="code lang-javascript"><div><span style="color: #F92672">const</span>&nbsp;expect&nbsp;<span style="color: #F92672">=</span>&nbsp;require<span style="color: #999">(</span><span style="color: #E6DB74">'unexpected'</span><span style="color: #999">);</span></div></pre>
 
 <h3 id="browser">Browser</h3>
 <p>Include <code>unexpected.js</code>.</p>
 <pre class="code lang-html"><div><span style="color: #999">&lt;</span><span style="color: #66D9EF; font-weight: bold">script&nbsp;</span><span style="color: #E6DB74">src</span><span style="color: #999">=&quot;</span><span style="color: #F92672">unexpected.js</span><span style="color: #999">&quot;&gt;&lt;/</span><span style="color: #66D9EF; font-weight: bold">script</span><span style="color: #999">&gt;</span></div></pre>
 
 <p>This will expose the <code>expect</code> function under the following namespace:</p>
-<pre class="code lang-javascript"><div><span style="color: #F92672">var</span>&nbsp;expect&nbsp;<span style="color: #F92672">=</span>&nbsp;weknowhow<span style="color: #999">.</span>expect<span style="color: #999">;</span></div></pre>
+<pre class="code lang-javascript"><div><span style="color: #F92672">const</span>&nbsp;expect&nbsp;<span style="color: #F92672">=</span>&nbsp;weknowhow<span style="color: #999">.</span>expect<span style="color: #999">;</span></div></pre>
 
 <h3 id="requirejs">RequireJS</h3>
 <p>Include the library with RequireJS the following way:</p>
