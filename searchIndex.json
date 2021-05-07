@@ -76,60 +76,8 @@
     "url": "/assertions/Buffer/when-decoded-as/"
   },
   {
-    "label": "to be defined (any)",
-    "url": "/assertions/any/to-be-defined/"
-  },
-  {
-    "label": "to be falsy (any)",
-    "url": "/assertions/any/to-be-falsy/"
-  },
-  {
-    "label": "to be null (any)",
-    "url": "/assertions/any/to-be-null/"
-  },
-  {
-    "label": "to be a (any)",
-    "url": "/assertions/any/to-be-a/"
-  },
-  {
-    "label": "to be ok (any)",
-    "url": "/assertions/any/to-be-ok/"
-  },
-  {
-    "label": "to be truthy (any)",
-    "url": "/assertions/any/to-be-truthy/"
-  },
-  {
-    "label": "to be one of (any)",
-    "url": "/assertions/any/to-be-one-of/"
-  },
-  {
-    "label": "to be undefined (any)",
-    "url": "/assertions/any/to-be-undefined/"
-  },
-  {
-    "label": "to be (any)",
-    "url": "/assertions/any/to-be/"
-  },
-  {
-    "label": "to satisfy (any)",
-    "url": "/assertions/any/to-satisfy/"
-  },
-  {
-    "label": "to equal (any)",
-    "url": "/assertions/any/to-equal/"
-  },
-  {
-    "label": "when passed as parameter to (any)",
-    "url": "/assertions/any/when-passed-as-parameter-to/"
-  },
-  {
     "label": "to have message (Error)",
     "url": "/assertions/Error/to-have-message/"
-  },
-  {
-    "label": "to be fulfilled with (Promise)",
-    "url": "/assertions/Promise/to-be-fulfilled-with/"
   },
   {
     "label": "to be fulfilled with value satisfying (Promise)",
@@ -142,6 +90,10 @@
   {
     "label": "to be rejected with error satisfying (Promise)",
     "url": "/assertions/Promise/to-be-rejected-with-error-satisfying/"
+  },
+  {
+    "label": "to be fulfilled with (Promise)",
+    "url": "/assertions/Promise/to-be-fulfilled-with/"
   },
   {
     "label": "to be rejected with (Promise)",
@@ -172,12 +124,12 @@
     "url": "/assertions/array-like/to-contain/"
   },
   {
-    "label": "to have items satisfying (array-like)",
-    "url": "/assertions/array-like/to-have-items-satisfying/"
-  },
-  {
     "label": "to have an item satisfying (array-like)",
     "url": "/assertions/array-like/to-have-an-item-satisfying/"
+  },
+  {
+    "label": "to have items satisfying (array-like)",
+    "url": "/assertions/array-like/to-have-items-satisfying/"
   },
   {
     "label": "to have length (array-like)",
@@ -212,6 +164,10 @@
     "url": "/assertions/number/to-be-close-to/"
   },
   {
+    "label": "to be greater than (number)",
+    "url": "/assertions/number/to-be-greater-than/"
+  },
+  {
     "label": "to be finite (number)",
     "url": "/assertions/number/to-be-finite/"
   },
@@ -220,20 +176,16 @@
     "url": "/assertions/number/to-be-greater-than-or-equal-to/"
   },
   {
-    "label": "to be greater than (number)",
-    "url": "/assertions/number/to-be-greater-than/"
-  },
-  {
     "label": "to be infinite (number)",
     "url": "/assertions/number/to-be-infinite/"
   },
   {
-    "label": "to be less than or equal to (number)",
-    "url": "/assertions/number/to-be-less-than-or-equal-to/"
-  },
-  {
     "label": "to be less than (number)",
     "url": "/assertions/number/to-be-less-than/"
+  },
+  {
+    "label": "to be less than or equal to (number)",
+    "url": "/assertions/number/to-be-less-than-or-equal-to/"
   },
   {
     "label": "to be negative (number)",
@@ -248,6 +200,54 @@
     "url": "/assertions/number/to-be-within/"
   },
   {
+    "label": "to be a (any)",
+    "url": "/assertions/any/to-be-a/"
+  },
+  {
+    "label": "to be defined (any)",
+    "url": "/assertions/any/to-be-defined/"
+  },
+  {
+    "label": "to be falsy (any)",
+    "url": "/assertions/any/to-be-falsy/"
+  },
+  {
+    "label": "to be null (any)",
+    "url": "/assertions/any/to-be-null/"
+  },
+  {
+    "label": "to be ok (any)",
+    "url": "/assertions/any/to-be-ok/"
+  },
+  {
+    "label": "to be truthy (any)",
+    "url": "/assertions/any/to-be-truthy/"
+  },
+  {
+    "label": "to be one of (any)",
+    "url": "/assertions/any/to-be-one-of/"
+  },
+  {
+    "label": "to be (any)",
+    "url": "/assertions/any/to-be/"
+  },
+  {
+    "label": "to be undefined (any)",
+    "url": "/assertions/any/to-be-undefined/"
+  },
+  {
+    "label": "to equal (any)",
+    "url": "/assertions/any/to-equal/"
+  },
+  {
+    "label": "to satisfy (any)",
+    "url": "/assertions/any/to-satisfy/"
+  },
+  {
+    "label": "when passed as parameter to (any)",
+    "url": "/assertions/any/when-passed-as-parameter-to/"
+  },
+  {
     "label": "to call the callback with error (function)",
     "url": "/assertions/function/to-call-the-callback-with-error/"
   },
@@ -256,12 +256,12 @@
     "url": "/assertions/function/to-call-the-callback-without-error/"
   },
   {
-    "label": "to call the callback (function)",
-    "url": "/assertions/function/to-call-the-callback/"
-  },
-  {
     "label": "to error (function)",
     "url": "/assertions/function/to-error/"
+  },
+  {
+    "label": "to call the callback (function)",
+    "url": "/assertions/function/to-call-the-callback/"
   },
   {
     "label": "to have arity (function)",
@@ -272,28 +272,28 @@
     "url": "/assertions/function/to-throw-a/"
   },
   {
-    "label": "when called with (function)",
-    "url": "/assertions/function/when-called-with/"
-  },
-  {
     "label": "to throw (function)",
     "url": "/assertions/function/to-throw/"
+  },
+  {
+    "label": "when called with (function)",
+    "url": "/assertions/function/when-called-with/"
   },
   {
     "label": "when called (function)",
     "url": "/assertions/function/when-called/"
   },
   {
-    "label": "to be canonical (object)",
-    "url": "/assertions/object/to-be-canonical/"
+    "label": "to have a value satisfying (object)",
+    "url": "/assertions/object/to-have-a-value-satisfying/"
   },
   {
     "label": "to be empty (object)",
     "url": "/assertions/object/to-be-empty/"
   },
   {
-    "label": "to have a value satisfying (object)",
-    "url": "/assertions/object/to-have-a-value-satisfying/"
+    "label": "to be canonical (object)",
+    "url": "/assertions/object/to-be-canonical/"
   },
   {
     "label": "to have key (object)",
@@ -312,12 +312,12 @@
     "url": "/assertions/object/to-have-properties/"
   },
   {
-    "label": "to have property (object)",
-    "url": "/assertions/object/to-have-property/"
-  },
-  {
     "label": "to have values satisfying (object)",
     "url": "/assertions/object/to-have-values-satisfying/"
+  },
+  {
+    "label": "to have property (object)",
+    "url": "/assertions/object/to-have-property/"
   },
   {
     "label": "to be empty (string)",
@@ -328,16 +328,16 @@
     "url": "/assertions/string/to-be-greater-than-or-equal-to/"
   },
   {
-    "label": "to be greater than (string)",
-    "url": "/assertions/string/to-be-greater-than/"
-  },
-  {
     "label": "to be less than or equal to (string)",
     "url": "/assertions/string/to-be-less-than-or-equal-to/"
   },
   {
     "label": "to be less than (string)",
     "url": "/assertions/string/to-be-less-than/"
+  },
+  {
+    "label": "to be greater than (string)",
+    "url": "/assertions/string/to-be-greater-than/"
   },
   {
     "label": "to be non empty (string)",
@@ -364,15 +364,15 @@
     "url": "/assertions/string/to-end-with/"
   },
   {
+    "label": "to have length (string)",
+    "url": "/assertions/string/to-have-length/"
+  },
+  {
     "label": "to match (string)",
     "url": "/assertions/string/to-match/"
   },
   {
     "label": "to start with (string)",
     "url": "/assertions/string/to-start-with/"
-  },
-  {
-    "label": "to have length (string)",
-    "url": "/assertions/string/to-have-length/"
   }
 ]
