@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="/static/normalize.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/static/main.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/bug-icon-black.ico">
+    <link rel="stylesheet" href="../../static/normalize.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../static/main.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../static/bug-icon-black.ico">
     <title>installTheme</title>
 </head>
-<body class="sidebar-hidden">
+<body class="sidebar-hidden has-sidebar">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -18,16 +18,16 @@
                     <button class="menu-toggle" onclick="toggleSidebar()"></button>
                 </li>
                 
-                <li class=""><a href="/">Unexpected</a></li>
+                <li class=""><a href="../../">Unexpected</a></li>
                 
                 
-                <li class=""><a href="/assertions/any/to-be/">Assertions</a></li>
+                <li class=""><a href="../../assertions/any/to-be/">Assertions</a></li>
                 
                 
-                <li class="active"><a href="/api/addAssertion/">API</a></li>
+                <li class="active"><a href="../addAssertion/">API</a></li>
                 
                 
-                <li class=""><a href="/./plugins/">Plugins</a></li>
+                <li class=""><a href="../../plugins/">Plugins</a></li>
                 
             </ul>
         </nav>
@@ -76,7 +76,7 @@
         </li>
         
         <li class="active">
-            <a href="../installTheme/">installTheme</a>
+            <a href="./">installTheme</a>
         </li>
         
         <li class="">
@@ -120,25 +120,25 @@
 
     <div class="main" tabindex="-1">
         <div class="content">
-            <html><head></head><body><h1 id="expectinstalltheme">expect.installTheme(...)</h1>
+            <h1 id="expect-installtheme-">expect.installTheme(...)</h1>
 <p>Install a <a href="https://github.com/sunesimonsen/magicpen">MagicPen</a> theme into the expect instance,
-so that it's used when rendering error messages and diffs.</p>
+so that it&#39;s used when rendering error messages and diffs.</p>
 <p>Proxies through to <a href="https://github.com/sunesimonsen/magicpen#installthemetheme-installthemeformat-theme-installthemeformats-theme">magicPen.installTheme</a>. See the documentation there.</p>
 <p>Example:</p>
 <pre class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">installTheme</span><span style="color: #000000">({</span></div><div>&nbsp;&nbsp;<span style="color: #0086b3">styles</span><span style="color: yellow">:</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0086b3">ugliness</span><span style="color: yellow">:</span>&nbsp;<span style="color: #df5000">'yellow'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0086b3">jsKeyword</span><span style="color: yellow">:</span>&nbsp;<span style="color: #df5000">'ugliness'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #000000">},</span></div><div><span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span><span style="color: yellow">function</span>&nbsp;<span style="color: #000000">foo</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{},</span>&nbsp;<span style="color: #df5000">'to&nbsp;throw'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'bar'</span><span style="color: #000000">);</span></div></pre>
 
 <pre class="output"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: yellow">function</span>&nbsp;<span style="color: #000000">foo</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{}</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;throw</span>&nbsp;<span style="color: #df5000">'bar'</span></div><div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: yellow">function</span>&nbsp;<span style="color: #000000">foo</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{}</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;throw</span></div><div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: red; font-weight: bold">did&nbsp;not&nbsp;throw</span></div></div></div></div></div></pre>
-</body></html>
+
         </div>
     </div>
 </section>
 <script type="text/javascript">
-    baseUrl = '/';
+    baseUrl = '../..';
 </script>
-<script type="text/javascript" src="/static/toggleSidebar.js"></script>
-<script type="text/javascript" src="/static/rememberScrollPosition.js"></script>
-<script type="text/javascript" src="/static/focusMain.js"></script>
-<script type="text/javascript" src="/static/search.js"></script>
+<script type="text/javascript" src="../../static/toggleSidebar.js"></script>
+<script type="text/javascript" src="../../static/rememberScrollPosition.js"></script>
+<script type="text/javascript" src="../../static/focusMain.js"></script>
+<script type="text/javascript" src="../../static/search.js"></script>
 </body>
 </html>
 

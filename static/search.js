@@ -21,16 +21,14 @@ function setupSearch(searchIndex) {
   searchDropDown.addEventListener('mousedown', function(e) {
     if (e.button === 0 && e.target.hasAttribute('data-index')) {
       var index = e.target.getAttribute('data-index');
-      var matchedUrl = renderedMatches[index].url;
-      window.location.href = baseUrl + matchedUrl.replace(/^\//, '');
+      window.location.href = baseUrl + renderedMatches[index].url;
     }
   });
 
   searchDropDown.addEventListener('touchstart', function(e) {
     if (e.target.hasAttribute('data-index')) {
       var index = e.target.getAttribute('data-index');
-      var matchedUrl = renderedMatches[index].url;
-      window.location.href = baseUrl + matchedUrl.replace(/^\//, '');
+      window.location.href = baseUrl + renderedMatches[index].url;
     }
   });
 
@@ -193,7 +191,7 @@ var getJSON = function(url, successHandler, errorHandler) {
   xhr.send();
 };
 
-getJSON(baseUrl + 'searchIndex.json', function(status, data) {
+getJSON(baseUrl + '/searchIndex.json', function(status, data) {
   if (data.length > 0) {
     setupSearch(data);
   }

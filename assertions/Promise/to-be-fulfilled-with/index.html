@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="/static/normalize.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/static/main.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/bug-icon-black.ico">
+    <link rel="stylesheet" href="../../../static/normalize.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../../static/main.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../../static/bug-icon-black.ico">
     <title>to be fulfilled with (Promise)</title>
 </head>
-<body class="sidebar-hidden">
+<body class="sidebar-hidden has-sidebar">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -18,16 +18,16 @@
                     <button class="menu-toggle" onclick="toggleSidebar()"></button>
                 </li>
                 
-                <li class=""><a href="/">Unexpected</a></li>
+                <li class=""><a href="../../../">Unexpected</a></li>
                 
                 
-                <li class="active"><a href="/assertions/any/to-be/">Assertions</a></li>
+                <li class="active"><a href="../../any/to-be/">Assertions</a></li>
                 
                 
-                <li class=""><a href="/api/addAssertion/">API</a></li>
+                <li class=""><a href="../../../api/addAssertion/">API</a></li>
                 
                 
-                <li class=""><a href="/./plugins/">Plugins</a></li>
+                <li class=""><a href="../../../plugins/">Plugins</a></li>
                 
             </ul>
         </nav>
@@ -300,68 +300,39 @@
             
         </ul>
     
-        <h3 class=""><a href="../../Promise/">Promise</a></h3>
+        <h3 class=""><a href="../">Promise</a></h3>
         <ul>
             
             <li class="">
-                <a href="../../Promise/to-be-fulfilled/">to be fulfilled</a>
+                <a href="../to-be-fulfilled/">to be fulfilled</a>
             </li>
             
             <li class="active">
-                <a href="../../Promise/to-be-fulfilled-with/">to be fulfilled with</a>
+                <a href="./">to be fulfilled with</a>
             </li>
             
             <li class="">
-                <a href="../../Promise/to-be-fulfilled-with-value-satisfying/">to be fulfilled with value satisfying</a>
+                <a href="../to-be-fulfilled-with-value-satisfying/">to be fulfilled with value satisfying</a>
             </li>
             
             <li class="">
-                <a href="../../Promise/to-be-rejected/">to be rejected</a>
+                <a href="../to-be-rejected/">to be rejected</a>
             </li>
             
             <li class="">
-                <a href="../../Promise/to-be-rejected-with/">to be rejected with</a>
+                <a href="../to-be-rejected-with/">to be rejected with</a>
             </li>
             
             <li class="">
-                <a href="../../Promise/to-be-rejected-with-error-satisfying/">to be rejected with error satisfying</a>
+                <a href="../to-be-rejected-with-error-satisfying/">to be rejected with error satisfying</a>
             </li>
             
             <li class="">
-                <a href="../../Promise/when-fulfilled/">when fulfilled</a>
+                <a href="../when-fulfilled/">when fulfilled</a>
             </li>
             
             <li class="">
-                <a href="../../Promise/when-rejected/">when rejected</a>
-            </li>
-            
-        </ul>
-    
-        <h3 class=""><a href="../../Set/">Set</a></h3>
-        <ul>
-            
-            <li class="">
-                <a href="../../Set/to-be-empty/">to be empty</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-contain/">to contain</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-have-an-item-satisfying/">to have an item satisfying</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-have-items-satisfying/">to have items satisfying</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-have-size/">to have size</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-satisfy/">to satisfy</a>
+                <a href="../when-rejected/">when rejected</a>
             </li>
             
         </ul>
@@ -437,11 +408,11 @@
                 
                 </ul>
             
-            <html><head></head><body><p>Asserts that a promise is fulfilled with a specific value:</p>
+            <p>Asserts that a promise is fulfilled with a specific value:</p>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">const</span>&nbsp;promiseThatWillBeFulfilledWithAValue&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #a71d5d">new</span>&nbsp;Promise<span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span></div><div>&nbsp;&nbsp;resolve<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;reject</div><div><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">resolve</span><span style="color: #000000">(</span><span style="color: #df5000">'abc'</span><span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;promiseThatWillBeFulfilledWithAValue<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;fulfilled&nbsp;with'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'abc'</span></div><div><span style="color: #000000">);</span></div></pre>
 
 <p>The expected value will be matched against the value with
-<a href="../../any/to-satisfy">to satisfy</a> semantics, so you can pass any of the
+<a href="../../any/to-satisfy/">to satisfy</a> semantics, so you can pass any of the
 values supported by <code>to satisfy</code>:</p>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>Promise<span style="color: #000000">.</span><span style="color: #000000">resolve</span><span style="color: #000000">(</span><span style="color: #df5000">'abc'</span><span style="color: #000000">),</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;fulfilled&nbsp;with'</span><span style="color: #000000">,</span>&nbsp;/b/<span style="color: #000000">);</span></div></pre>
 
@@ -449,17 +420,17 @@ values supported by <code>to satisfy</code>:</p>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>Promise<span style="color: #000000">.</span><span style="color: #000000">resolve</span><span style="color: #000000">(</span><span style="color: #df5000">'abc'</span><span style="color: #000000">),</span>&nbsp;<span style="color: #df5000">'to&nbsp;be&nbsp;fulfilled&nbsp;with'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'def'</span><span style="color: #000000">);</span></div></pre>
 
 <pre class="output"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: #795da3">Promise</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;be&nbsp;fulfilled&nbsp;with</span>&nbsp;<span style="color: #df5000">'def'</span></div><div>&nbsp;&nbsp;<div style="display: inline-block; vertical-align: top"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: #df5000">'abc'</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;equal</span>&nbsp;<span style="color: #df5000">'def'</span></div><div>&nbsp;</div><div><span style="background-color: red; color: white">abc</span></div><div><span style="background-color: green; color: white">def</span></div></div></div></pre>
-</body></html>
+
         </div>
     </div>
 </section>
 <script type="text/javascript">
-    baseUrl = '/';
+    baseUrl = '../../..';
 </script>
-<script type="text/javascript" src="/static/toggleSidebar.js"></script>
-<script type="text/javascript" src="/static/rememberScrollPosition.js"></script>
-<script type="text/javascript" src="/static/focusMain.js"></script>
-<script type="text/javascript" src="/static/search.js"></script>
+<script type="text/javascript" src="../../../static/toggleSidebar.js"></script>
+<script type="text/javascript" src="../../../static/rememberScrollPosition.js"></script>
+<script type="text/javascript" src="../../../static/focusMain.js"></script>
+<script type="text/javascript" src="../../../static/search.js"></script>
 </body>
 </html>
 

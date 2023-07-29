@@ -112,30 +112,6 @@
     "url": "/assertions/Promise/when-rejected/"
   },
   {
-    "label": "to be empty (Set)",
-    "url": "/assertions/Set/to-be-empty/"
-  },
-  {
-    "label": "to contain (Set)",
-    "url": "/assertions/Set/to-contain/"
-  },
-  {
-    "label": "to have an item satisfying (Set)",
-    "url": "/assertions/Set/to-have-an-item-satisfying/"
-  },
-  {
-    "label": "to have items satisfying (Set)",
-    "url": "/assertions/Set/to-have-items-satisfying/"
-  },
-  {
-    "label": "to have size (Set)",
-    "url": "/assertions/Set/to-have-size/"
-  },
-  {
-    "label": "to satisfy (Set)",
-    "url": "/assertions/Set/to-satisfy/"
-  },
-  {
     "label": "to be a (any)",
     "url": "/assertions/any/to-be-a/"
   },
