@@ -3,12 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="../static/normalize.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../static/main.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../static/bug-icon-black.ico">
+    <link rel="stylesheet" href="/static/normalize.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/static/main.css" type="text/css" media="screen" />
+    
+    <link rel="stylesheet" href="/static/gh-fork-ribbon.css" type="text/css" media="screen" />
+    
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/bug-icon-black.ico">
     <title>Migration</title>
 </head>
-<body class="sidebar-hidden theme-light">
+<body class="sidebar-hidden theme-light" data-sidebar="false">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -17,16 +20,16 @@
                     <button class="menu-toggle" onclick="toggleSidebar()"></button>
                 </li>
                 
-                <li class=""><a href="../">Unexpected</a></li>
+                <li class=""><a href="/">Unexpected</a></li>
                 
                 
-                <li class=""><a href="../assertions/any/to-be/">Assertions</a></li>
+                <li class=""><a href="/assertions/any/to-be/">Assertions</a></li>
                 
                 
-                <li class=""><a href="../api/addAssertion/">API</a></li>
+                <li class=""><a href="/api/addAssertion/">API</a></li>
                 
                 
-                <li class=""><a href="../plugins/">Plugins</a></li>
+                <li class=""><a href="/./plugins/">Plugins</a></li>
                 
             </ul>
         </nav>
@@ -40,10 +43,10 @@
 
 <div class="main" tabindex="-1">
     <div class="content">
-        <h1 id="migration">Migration</h1>
+        <html><head></head><body><h1 id="migration">Migration</h1>
 <p>Unexpected has from its inception taken backwards compatibility very
 seriously. We think this is particularly important for a library
-intended for use in testing &ndash; we recognise that comprehensive test
+intended for use in testing – we recognise that comprehensive test
 suites are often a large investment and play a central role in ongoing
 development of software. This sets a very high bar for any changes.</p>
 <p>The project strictly adheres to semver. As such anything that carries
@@ -62,12 +65,12 @@ confusion and to the best of our knowledge have not seen wide use
 have been replaced with <strong>existing</strong> alternatives. This means a safe
 upgrade path is available: tests can be updated against the current
 version of the library and the changes are forwards compatible.</p>
-<h4 id="raise-minimum-node-version-to-6-">Raise minimum node version to 6+</h4>
+<h4 id="raise-minimum-node-version-to-6">Raise minimum node version to 6+</h4>
 <p>In our work to continue moving forward we have upgraded many of our
 dependencies. Many of these tools have themselves dropped node 4
 support and we have decided to do the same. This does not affect our
 browser compatibility which remains at the ES5 level and IE11.</p>
-<h4 id="using-extensions-via-the-api-requires-calling-clone-">Using extensions via the API requires calling .clone()</h4>
+<h4 id="using-extensions-via-the-api-requires-calling-clone">Using extensions via the API requires calling .clone()</h4>
 <p>Previously once imported the entirety of the Unexpected API was
 immediately available to users which could lead to surprising
 results if types or assertions were added to it directly.</p>
@@ -76,8 +79,8 @@ extending the functionality requires an expilcit <code>.clone()</code> call
 to be made:</p>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">const</span>&nbsp;unexpected&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #000000">require</span><span style="color: #000000">(</span><span style="color: #df5000">'unexpected'</span><span style="color: #000000">);</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">const</span>&nbsp;expect&nbsp;<span style="color: #a71d5d">=</span>&nbsp;unexpected<span style="color: #000000">.</span><span style="color: #000000">clone</span><span style="color: #000000">();</span></div><div>&nbsp;</div><div>expect<span style="color: #000000">.</span><span style="color: #000000">addAssertion</span><span style="color: #000000">(</span><span style="color: #a71d5d">...</span><span style="color: #000000">);</span></div></pre>
 
-<h4 id="use-expect-it-for-assertions-on-property-values">Use <code>expect.it()</code> for assertions on property values</h4>
-<p>Previously when used in conjunction with <a href="../assertions/any/to-satisfy/">to satisfy</a>
+<h4 id="use-expectit-for-assertions-on-property-values">Use <code>expect.it()</code> for assertions on property values</h4>
+<p>Previously when used in conjunction with <a href="../assertions/any/to-satisfy">to satisfy</a>
 a property
 defined as a function on the right-hand side would be passed the
 value to allow further assertions:</p>
@@ -115,27 +118,27 @@ must be written more explicitly allowing the issue to be caught:</p>
 
 <p>When interacting with object types this affects:</p>
 <ul>
-<li><a href="../assertions/any/to-satisfy/">to satisfy</a></li>
-<li><a href="../assertions/object/to-have-keys-satisfying/">to have keys satisfying</a></li>
-<li><a href="../assertions/object/to-have-a-value-satisfying/">to have a value satisfying</a></li>
-<li><a href="../assertions/object/to-have-values-satisfying/">to have values satisfying</a></li>
+<li><a href="../assertions/any/to-satisfy">to satisfy</a></li>
+<li><a href="../assertions/object/to-have-keys-satisfying">to have keys satisfying</a></li>
+<li><a href="../assertions/object/to-have-a-value-satisfying">to have a value satisfying</a></li>
+<li><a href="../assertions/object/to-have-values-satisfying">to have values satisfying</a></li>
 </ul>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">myCallback</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{}</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">const</span>&nbsp;options&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #0086b3">data</span><span style="color: #a71d5d">:</span>&nbsp;<span style="color: #a71d5d">null</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #0086b3">callback</span><span style="color: #a71d5d">:</span>&nbsp;myCallback<span style="color: #000000">,</span></div><div><span style="color: #000000">};</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span>options<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;satisfy'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #0086b3">callback</span><span style="color: #a71d5d">:</span>&nbsp;myCallback<span style="color: #000000">,</span></div><div><span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span>options<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;a&nbsp;value&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;myCallback<span style="color: #000000">);</span></div></pre>
 
 <p>With array-like types it affects:</p>
 <ul>
-<li><a href="../assertions/any/to-satisfy/">to satisfy</a></li>
-<li><a href="../assertions/array-like/to-have-an-item-satisfying/">to have an item satisfying</a></li>
-<li><a href="../assertions/array-like/to-have-items-satisfying/">to have items satisfying</a></li>
+<li><a href="../assertions/any/to-satisfy">to satisfy</a></li>
+<li><a href="../assertions/array-like/to-have-an-item-satisfying">to have an item satisfying</a></li>
+<li><a href="../assertions/array-like/to-have-items-satisfying">to have items satisfying</a></li>
 </ul>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">someFunction</span><span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{}</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">const</span>&nbsp;args&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #000000">[</span>someFunction<span style="color: #000000">];</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span>args<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;an&nbsp;item&nbsp;satisfying'</span><span style="color: #000000">,</span>&nbsp;someFunction<span style="color: #000000">);</span></div></pre>
 
-<h4 id="support-for-expect-async-has-been-removed">Support for <code>expect.async</code> has been removed</h4>
-<p><code>expect.async</code> was a helper for asynchronous tests. It predates Unexpected&#39;s
-promise support and we expect that it&#39;s very unlikely to be used by anyone.</p>
-<p>If you&#39;re using it, we recommend that you rewrite the given tests to a
+<h4 id="support-for-expectasync-has-been-removed">Support for <code>expect.async</code> has been removed</h4>
+<p><code>expect.async</code> was a helper for asynchronous tests. It predates Unexpected's
+promise support and we expect that it's very unlikely to be used by anyone.</p>
+<p>If you're using it, we recommend that you rewrite the given tests to a
 promise-driven flow as part of upgrading to Unexpected 11.</p>
-<h4 id="this-errormode-etc-no-longer-available-in-assertion-handlers"><code>this.errorMode</code> etc. no longer available in assertion handlers</h4>
+<h4 id="thiserrormode-etc-no-longer-available-in-assertion-handlers"><code>this.errorMode</code> etc. no longer available in assertion handlers</h4>
 <p>This syntax has been deprecated since Unexpected 3:</p>
 <pre class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">addAssertion</span><span style="color: #000000">(</span><span style="color: #df5000">'&lt;string&gt;&nbsp;to&nbsp;be&nbsp;foo'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #000000">(</span>expect<span style="color: #000000">,</span>&nbsp;subject<span style="color: #000000">)</span>&nbsp;<span style="color: #a71d5d">=&gt;</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">this</span><span style="color: #000000">.</span>errorMode&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #df5000">'nested'</span><span style="color: #000000">;</span></div><div>&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>subject<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'foo'</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div></pre>
 
@@ -144,17 +147,19 @@ promise-driven flow as part of upgrading to Unexpected 11.</p>
 </blockquote>
 <p>To fix code like this, access the property on <code>expect</code> instead:</p>
 <pre class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">addAssertion</span><span style="color: #000000">(</span><span style="color: #df5000">'&lt;string&gt;&nbsp;to&nbsp;be&nbsp;foo'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #000000">(</span>expect<span style="color: #000000">,</span>&nbsp;subject<span style="color: #000000">)</span>&nbsp;<span style="color: #a71d5d">=&gt;</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;expect<span style="color: #000000">.</span>errorMode&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #df5000">'nested'</span><span style="color: #000000">;</span></div><div>&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>subject<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'foo'</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div></pre>
-
+</body></html>
     </div>
-    <a class="github-ribbon" href="https://github.com/unexpectedjs/unexpected"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+    
+    <a class="github-fork-ribbon" href="https://github.com/unexpectedjs/unexpected" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+    
 </div>
 <script type="text/javascript">
-    baseUrl = '..';
+    baseUrl = '/';
 </script>
-<script type="text/javascript" src="../static/toggleSidebar.js"></script>
-<script type="text/javascript" src="../static/rememberScrollPosition.js"></script>
-<script type="text/javascript" src="../static/focusMain.js"></script>
-<script type="text/javascript" src="../static/search.js"></script>
+<script type="text/javascript" src="/static/toggleSidebar.js"></script>
+<script type="text/javascript" src="/static/rememberScrollPosition.js"></script>
+<script type="text/javascript" src="/static/focusMain.js"></script>
+<script type="text/javascript" src="/static/search.js"></script>
 </body>
 </html>
 

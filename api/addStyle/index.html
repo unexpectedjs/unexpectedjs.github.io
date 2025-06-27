@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="../../static/normalize.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../../static/main.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../static/bug-icon-black.ico">
+    <link rel="stylesheet" href="/static/normalize.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/static/main.css" type="text/css" media="screen" />
+    
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/bug-icon-black.ico">
     <title>addStyle</title>
 </head>
-<body class="sidebar-hidden has-sidebar">
+<body class="sidebar-hidden" data-sidebar="true">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -18,16 +19,16 @@
                     <button class="menu-toggle" onclick="toggleSidebar()"></button>
                 </li>
                 
-                <li class=""><a href="../../">Unexpected</a></li>
+                <li class=""><a href="/">Unexpected</a></li>
                 
                 
-                <li class=""><a href="../../assertions/any/to-be/">Assertions</a></li>
+                <li class=""><a href="/assertions/any/to-be/">Assertions</a></li>
                 
                 
-                <li class="active"><a href="../addAssertion/">API</a></li>
+                <li class="active"><a href="/api/addAssertion/">API</a></li>
                 
                 
-                <li class=""><a href="../../plugins/">Plugins</a></li>
+                <li class=""><a href="/./plugins/">Plugins</a></li>
                 
             </ul>
         </nav>
@@ -48,7 +49,7 @@
         </li>
         
         <li class="active">
-            <a href="./">addStyle</a>
+            <a href="../addStyle/">addStyle</a>
         </li>
         
         <li class="">
@@ -120,26 +121,26 @@
 
     <div class="main" tabindex="-1">
         <div class="content">
-            <h1 id="expect-addstyle-">expect.addStyle(...)</h1>
+            <html><head></head><body><h1 id="expectaddstyle">expect.addStyle(...)</h1>
 <p>Install a single <a href="https://github.com/sunesimonsen/magicpen">MagicPen</a> style into the
-<code>expect</code> instance, so that it&#39;s used when rendering error messages and diffs.</p>
+<code>expect</code> instance, so that it's used when rendering error messages and diffs.</p>
 <p>Proxies through to <a href="https://github.com/sunesimonsen/magicpen#addstylestyle-handler">magicPen.addStyle</a>.
 See the documentation there.</p>
 <p>Example:</p>
 <pre class="code lang-javascript"><div>expect<span style="color: #000000">.</span><span style="color: #000000">addStyle</span><span style="color: #000000">(</span><span style="color: #df5000">'jsString'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>text<span style="color: #000000">,</span>&nbsp;rainbowColors<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;rainbowColors&nbsp;<span style="color: #a71d5d">=</span>&nbsp;rainbowColors&nbsp;<span style="color: #a71d5d">||</span>&nbsp;<span style="color: #000000">[</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'gray'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'red'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'green'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'yellow'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'blue'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'magenta'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #df5000">'cyan'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #000000">];</span></div><div>&nbsp;&nbsp;<span style="color: #a71d5d">for</span>&nbsp;<span style="color: #000000">(</span><span style="color: #a71d5d">let</span>&nbsp;i&nbsp;<span style="color: #a71d5d">=</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">;</span>&nbsp;i&nbsp;<span style="color: #a71d5d">&lt;</span>&nbsp;text<span style="color: #000000">.</span>length<span style="color: #000000">;</span>&nbsp;i&nbsp;<span style="color: #a71d5d">+=</span>&nbsp;<span style="color: #0086b3">1</span><span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">const</span>&nbsp;color&nbsp;<span style="color: #a71d5d">=</span>&nbsp;rainbowColors<span style="color: #000000">[</span>i&nbsp;<span style="color: #a71d5d">%</span>&nbsp;rainbowColors<span style="color: #000000">.</span>length<span style="color: #000000">];</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a71d5d">this</span><span style="color: #000000">.</span><span style="color: #000000">text</span><span style="color: #000000">(</span>text<span style="color: #000000">[</span>i<span style="color: #000000">],</span>&nbsp;color<span style="color: #000000">);</span></div><div>&nbsp;&nbsp;<span style="color: #000000">}</span></div><div><span style="color: #000000">});</span></div><div>&nbsp;</div><div><span style="color: #000000">expect</span><span style="color: #000000">(</span><span style="color: #df5000">'foobar'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;equal'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'foo&nbsp;bar'</span><span style="color: #000000">);</span></div></pre>
 
 <pre class="output"><div><span style="color: red; font-weight: bold">expected</span>&nbsp;<span style="color: gray">'f</span><span style="color: red">o</span><span style="color: green">o</span><span style="color: yellow">b</span><span style="color: blue">a</span><span style="color: magenta">r</span><span style="color: gray">'</span>&nbsp;<span style="color: red; font-weight: bold">to&nbsp;equal</span>&nbsp;<span style="color: gray">'f</span><span style="color: red">o</span><span style="color: green">o</span><span style="color: yellow">&nbsp;</span><span style="color: blue">b</span><span style="color: magenta">a</span><span style="color: cyan">r</span><span style="color: gray">'</span></div><div>&nbsp;</div><div><span style="background-color: red; color: white">foobar</span></div><div><span style="background-color: green; color: white">foo&nbsp;bar</span></div></pre>
-
+</body></html>
         </div>
     </div>
 </section>
 <script type="text/javascript">
-    baseUrl = '../..';
+    baseUrl = '/';
 </script>
-<script type="text/javascript" src="../../static/toggleSidebar.js"></script>
-<script type="text/javascript" src="../../static/rememberScrollPosition.js"></script>
-<script type="text/javascript" src="../../static/focusMain.js"></script>
-<script type="text/javascript" src="../../static/search.js"></script>
+<script type="text/javascript" src="/static/toggleSidebar.js"></script>
+<script type="text/javascript" src="/static/rememberScrollPosition.js"></script>
+<script type="text/javascript" src="/static/focusMain.js"></script>
+<script type="text/javascript" src="/static/search.js"></script>
 </body>
 </html>
 

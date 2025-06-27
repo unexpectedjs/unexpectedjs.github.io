@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="../../static/normalize.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../../static/main.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../static/bug-icon-black.ico">
+    <link rel="stylesheet" href="/static/normalize.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/static/main.css" type="text/css" media="screen" />
+    
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/bug-icon-black.ico">
     <title>freeze</title>
 </head>
-<body class="sidebar-hidden has-sidebar">
+<body class="sidebar-hidden" data-sidebar="true">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -18,16 +19,16 @@
                     <button class="menu-toggle" onclick="toggleSidebar()"></button>
                 </li>
                 
-                <li class=""><a href="../../">Unexpected</a></li>
+                <li class=""><a href="/">Unexpected</a></li>
                 
                 
-                <li class=""><a href="../../assertions/any/to-be/">Assertions</a></li>
+                <li class=""><a href="/assertions/any/to-be/">Assertions</a></li>
                 
                 
-                <li class="active"><a href="../addAssertion/">API</a></li>
+                <li class="active"><a href="/api/addAssertion/">API</a></li>
                 
                 
-                <li class=""><a href="../../plugins/">Plugins</a></li>
+                <li class=""><a href="/./plugins/">Plugins</a></li>
                 
             </ul>
         </nav>
@@ -72,7 +73,7 @@
         </li>
         
         <li class="active">
-            <a href="./">freeze</a>
+            <a href="../freeze/">freeze</a>
         </li>
         
         <li class="">
@@ -120,29 +121,29 @@
 
     <div class="main" tabindex="-1">
         <div class="content">
-            <h1 id="expect-freeze-">expect.freeze()</h1>
+            <html><head></head><body><h1 id="expectfreeze">expect.freeze()</h1>
 <p>Prevents further assertions, types, styles, plugins, and themes from being added to the instance.
-Once frozen, the <a href="../addAssertion/"><code>addAssertion</code></a>, <a href="../addType/"><code>addType</code></a>,
-<a href="../addStyle/"><code>addStyle</code></a>, <a href="../installTheme/"><code>installTheme</code></a>, and <a href="../use/"><code>use</code></a> methods will
+Once frozen, the <a href="../addAssertion"><code>addAssertion</code></a>, <a href="../addType"><code>addType</code></a>,
+<a href="../addStyle"><code>addStyle</code></a>, <a href="../installTheme"><code>installTheme</code></a>, and <a href="../use"><code>use</code></a> methods will
 throw an exception.</p>
-<p><a href="../clone/">Cloning</a> a frozen instance is allowed, and clones will not be frozen initially.
-Creating a <a href="../child/">child</a> is also possible, but the child won&#39;t support <code>exportAssertion</code>,
+<p><a href="../clone">Cloning</a> a frozen instance is allowed, and clones will not be frozen initially.
+Creating a <a href="../child">child</a> is also possible, but the child won't support <code>exportAssertion</code>,
 <code>exportType</code>, and <code>exportStyle</code> because the parent <code>expect</code> is frozen. This means that some
 plugins cannot be installed into the child. To get around that, create a clone first.</p>
-<p>The plan is to make the top-level <code>expect</code> (the main export of <code>require(&#39;unexpected&#39;)</code>)
+<p>The plan is to make the top-level <code>expect</code> (the main export of <code>require('unexpected')</code>)
 frozen as of Unexpected 11. The idea behind that is to help prevent multiple files in a
 test suite from affecting each other by forcing each file to create its own isolated clone.</p>
-
+</body></html>
         </div>
     </div>
 </section>
 <script type="text/javascript">
-    baseUrl = '../..';
+    baseUrl = '/';
 </script>
-<script type="text/javascript" src="../../static/toggleSidebar.js"></script>
-<script type="text/javascript" src="../../static/rememberScrollPosition.js"></script>
-<script type="text/javascript" src="../../static/focusMain.js"></script>
-<script type="text/javascript" src="../../static/search.js"></script>
+<script type="text/javascript" src="/static/toggleSidebar.js"></script>
+<script type="text/javascript" src="/static/rememberScrollPosition.js"></script>
+<script type="text/javascript" src="/static/focusMain.js"></script>
+<script type="text/javascript" src="/static/search.js"></script>
 </body>
 </html>
 

@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="../../../static/normalize.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../../../static/main.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../../static/bug-icon-black.ico">
+    <link rel="stylesheet" href="/static/normalize.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/static/main.css" type="text/css" media="screen" />
+    
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/bug-icon-black.ico">
     <title>to call the callback with error (function)</title>
 </head>
-<body class="sidebar-hidden has-sidebar">
+<body class="sidebar-hidden" data-sidebar="true">
     <header>
         <div class="logo-icon"></div>
         <nav>
@@ -18,16 +19,16 @@
                     <button class="menu-toggle" onclick="toggleSidebar()"></button>
                 </li>
                 
-                <li class=""><a href="../../../">Unexpected</a></li>
+                <li class=""><a href="/">Unexpected</a></li>
                 
                 
-                <li class="active"><a href="../../any/to-be/">Assertions</a></li>
+                <li class="active"><a href="/assertions/any/to-be/">Assertions</a></li>
                 
                 
-                <li class=""><a href="../../../api/addAssertion/">API</a></li>
+                <li class=""><a href="/api/addAssertion/">API</a></li>
                 
                 
-                <li class=""><a href="../../../plugins/">Plugins</a></li>
+                <li class=""><a href="/./plugins/">Plugins</a></li>
                 
             </ul>
         </nav>
@@ -259,43 +260,43 @@
             
         </ul>
     
-        <h3 class=""><a href="../">function</a></h3>
+        <h3 class=""><a href="../../function/">function</a></h3>
         <ul>
             
             <li class="">
-                <a href="../to-call-the-callback/">to call the callback</a>
+                <a href="../../function/to-call-the-callback/">to call the callback</a>
             </li>
             
             <li class="active">
-                <a href="./">to call the callback with error</a>
+                <a href="../../function/to-call-the-callback-with-error/">to call the callback with error</a>
             </li>
             
             <li class="">
-                <a href="../to-call-the-callback-without-error/">to call the callback without error</a>
+                <a href="../../function/to-call-the-callback-without-error/">to call the callback without error</a>
             </li>
             
             <li class="">
-                <a href="../to-error/">to error</a>
+                <a href="../../function/to-error/">to error</a>
             </li>
             
             <li class="">
-                <a href="../to-have-arity/">to have arity</a>
+                <a href="../../function/to-have-arity/">to have arity</a>
             </li>
             
             <li class="">
-                <a href="../to-throw/">to throw</a>
+                <a href="../../function/to-throw/">to throw</a>
             </li>
             
             <li class="">
-                <a href="../to-throw-a/">to throw a</a>
+                <a href="../../function/to-throw-a/">to throw a</a>
             </li>
             
             <li class="">
-                <a href="../when-called/">when called</a>
+                <a href="../../function/when-called/">when called</a>
             </li>
             
             <li class="">
-                <a href="../when-called-with/">when called with</a>
+                <a href="../../function/when-called-with/">when called with</a>
             </li>
             
         </ul>
@@ -333,6 +334,35 @@
             
             <li class="">
                 <a href="../../Promise/when-rejected/">when rejected</a>
+            </li>
+            
+        </ul>
+    
+        <h3 class=""><a href="../../Set/">Set</a></h3>
+        <ul>
+            
+            <li class="">
+                <a href="../../Set/to-be-empty/">to be empty</a>
+            </li>
+            
+            <li class="">
+                <a href="../../Set/to-contain/">to contain</a>
+            </li>
+            
+            <li class="">
+                <a href="../../Set/to-have-an-item-satisfying/">to have an item satisfying</a>
+            </li>
+            
+            <li class="">
+                <a href="../../Set/to-have-items-satisfying/">to have items satisfying</a>
+            </li>
+            
+            <li class="">
+                <a href="../../Set/to-have-size/">to have size</a>
+            </li>
+            
+            <li class="">
+                <a href="../../Set/to-satisfy/">to satisfy</a>
             </li>
             
         </ul>
@@ -396,35 +426,6 @@
             
         </ul>
     
-        <h3 class=""><a href="../../Set/">Set</a></h3>
-        <ul>
-            
-            <li class="">
-                <a href="../../Set/to-be-empty/">to be empty</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-contain/">to contain</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-have-an-item-satisfying/">to have an item satisfying</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-have-items-satisfying/">to have items satisfying</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-have-size/">to have size</a>
-            </li>
-            
-            <li class="">
-                <a href="../../Set/to-satisfy/">to satisfy</a>
-            </li>
-            
-        </ul>
-    
 </nav>
 
     <div class="main" tabindex="-1">
@@ -439,7 +440,7 @@
                 
                 </ul>
             
-            <p>Asserts that a node.js-style asynchronous function taking a single callback
+            <html><head></head><body><p>Asserts that a node.js-style asynchronous function taking a single callback
 will call it with a truthy value as the first parameter.</p>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">myFailingAsyncFunction</span><span style="color: #000000">(</span>cb<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #000000">setTimeout</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">()</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000">cb</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'Oh&nbsp;dear'</span><span style="color: #000000">));</span></div><div>&nbsp;&nbsp;<span style="color: #000000">},</span>&nbsp;<span style="color: #0086b3">0</span><span style="color: #000000">);</span></div><div><span style="color: #000000">}</span></div></pre>
 
@@ -450,7 +451,7 @@ string as the second parameter.</p>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;myFailingAsyncFunction<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;call&nbsp;the&nbsp;callback&nbsp;with&nbsp;error'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'Oh&nbsp;dear'</span></div><div><span style="color: #000000">);</span></div></pre>
 
 <p>A regular expression, Error instance, or an object will also work, as the
-matching uses <a href="../../any/to-satisfy/">to satisfy</a> semantics:</p>
+matching uses <a href="../../any/to-satisfy">to satisfy</a> semantics:</p>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span></div><div>&nbsp;&nbsp;myFailingAsyncFunction<span style="color: #000000">,</span></div><div>&nbsp;&nbsp;<span style="color: #df5000">'to&nbsp;call&nbsp;the&nbsp;callback&nbsp;with&nbsp;error'</span><span style="color: #000000">,</span></div><div>&nbsp;&nbsp;/dear/</div><div><span style="color: #000000">);</span></div></pre>
 
 <p>In case of a failing expectation you get the following output:</p>
@@ -461,17 +462,17 @@ matching uses <a href="../../any/to-satisfy/">to satisfy</a> semantics:</p>
 <p>The error passed to the callback is also provided as the fulfillment value of
 the returned promise, so you can do further assertions like this:</p>
 <pre class="code lang-javascript"><div><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">asyncFn</span><span style="color: #000000">(</span>cb<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #000000">cb</span><span style="color: #000000">(</span><span style="color: #a71d5d">new</span>&nbsp;Error<span style="color: #000000">(</span><span style="color: #df5000">'yikes'</span><span style="color: #000000">));</span></div><div><span style="color: #000000">}</span></div><div>&nbsp;</div><div><span style="color: #a71d5d">return</span>&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>asyncFn<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;call&nbsp;the&nbsp;callback&nbsp;with&nbsp;error'</span><span style="color: #000000">).</span><span style="color: #000000">then</span><span style="color: #000000">(</span><span style="color: #a71d5d">function</span>&nbsp;<span style="color: #000000">(</span>err<span style="color: #000000">)</span>&nbsp;<span style="color: #000000">{</span></div><div>&nbsp;&nbsp;<span style="color: #969896">//&nbsp;err&nbsp;will&nbsp;be&nbsp;new&nbsp;Error('yikes')</span></div><div>&nbsp;&nbsp;<span style="color: #000000">expect</span><span style="color: #000000">(</span>err<span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'to&nbsp;have&nbsp;message'</span><span style="color: #000000">,</span>&nbsp;<span style="color: #df5000">'yikes'</span><span style="color: #000000">);</span></div><div><span style="color: #000000">});</span></div></pre>
-
+</body></html>
         </div>
     </div>
 </section>
 <script type="text/javascript">
-    baseUrl = '../../..';
+    baseUrl = '/';
 </script>
-<script type="text/javascript" src="../../../static/toggleSidebar.js"></script>
-<script type="text/javascript" src="../../../static/rememberScrollPosition.js"></script>
-<script type="text/javascript" src="../../../static/focusMain.js"></script>
-<script type="text/javascript" src="../../../static/search.js"></script>
+<script type="text/javascript" src="/static/toggleSidebar.js"></script>
+<script type="text/javascript" src="/static/rememberScrollPosition.js"></script>
+<script type="text/javascript" src="/static/focusMain.js"></script>
+<script type="text/javascript" src="/static/search.js"></script>
 </body>
 </html>
 
